@@ -2,7 +2,7 @@
 //  SimpleChatAppUITests.swift
 //  SimpleChatAppUITests
 //
-//  Created by PCMACEGITIM on 10.11.2021.
+//  Created by ibrahim akpinar on 10.11.2021.
 //
 
 import XCTest
