@@ -28,6 +28,11 @@
 		2649D8AA27444ADB00C36611 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D8A927444ADB00C36611 /* MainViewModel.swift */; };
 		2649D8AE27444C5A00C36611 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D8AD27444C5A00C36611 /* MainTabBarViewController.swift */; };
 		2649D8B12744566300C36611 /* UITextView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D8B02744566300C36611 /* UITextView+Extensions.swift */; };
+		2649D8B32745A20700C36611 /* VerifyPhoneNumberViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D8B22745A20700C36611 /* VerifyPhoneNumberViewController.swift */; };
+		2649D8B62745A24E00C36611 /* VerifyPhoneNumberViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D8B52745A24E00C36611 /* VerifyPhoneNumberViewModel.swift */; };
+		2649D8BB2745A48900C36611 /* CountryCodes.json in Resources */ = {isa = PBXBuildFile; fileRef = 2649D8BA2745A48900C36611 /* CountryCodes.json */; };
+		2649D8BE2745A4CA00C36611 /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2649D8BD2745A4CA00C36611 /* CountryCode.swift */; };
+		267865342745B12800DF062E /* SimpleChatAppAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267865332745B12800DF062E /* SimpleChatAppAPI.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +80,11 @@
 		2649D8A927444ADB00C36611 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		2649D8AD27444C5A00C36611 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		2649D8B02744566300C36611 /* UITextView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextView+Extensions.swift"; sourceTree = "<group>"; };
+		2649D8B22745A20700C36611 /* VerifyPhoneNumberViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewController.swift; sourceTree = "<group>"; };
+		2649D8B52745A24E00C36611 /* VerifyPhoneNumberViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewModel.swift; sourceTree = "<group>"; };
+		2649D8BA2745A48900C36611 /* CountryCodes.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = CountryCodes.json; sourceTree = "<group>"; };
+		2649D8BD2745A4CA00C36611 /* CountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
+		267865332745B12800DF062E /* SimpleChatAppAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleChatAppAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				267865342745B12800DF062E /* SimpleChatAppAPI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -109,6 +120,7 @@
 				261AC06E273C67E400F3F1EA /* SimpleChatAppTests */,
 				261AC079273C67E400F3F1EA /* SimpleChatAppUITests */,
 				261AC056273C67E200F3F1EA /* Products */,
+				267865322745B12800DF062E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +137,7 @@
 		261AC057273C67E200F3F1EA /* SimpleChatApp */ = {
 			isa = PBXGroup;
 			children = (
+				2649D8B82745A45E00C36611 /* Core */,
 				2649D8AF2744564B00C36611 /* Extensions */,
 				261AC090273C744F00F3F1EA /* SignIn */,
 				2649D8A427444A6A00C36611 /* Main */,
@@ -168,10 +181,11 @@
 		261AC090273C744F00F3F1EA /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
+				2649D8BC2745A4B200C36611 /* Models */,
+				2649D8B42745A23600C36611 /* ViewModel */,
+				2649D8B72745A25300C36611 /* Controllers */,
 				261AC091273C746B00F3F1EA /* SignInCoordinator.swift */,
 				261AC093273C748400F3F1EA /* SignIn.storyboard */,
-				261AC097273C74AC00F3F1EA /* SignInViewModel.swift */,
-				2649D897273F1D0200C36611 /* SignInViewController.swift */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -229,6 +243,56 @@
 				2649D8B02744566300C36611 /* UITextView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2649D8B42745A23600C36611 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				261AC097273C74AC00F3F1EA /* SignInViewModel.swift */,
+				2649D8B52745A24E00C36611 /* VerifyPhoneNumberViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		2649D8B72745A25300C36611 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2649D897273F1D0200C36611 /* SignInViewController.swift */,
+				2649D8B22745A20700C36611 /* VerifyPhoneNumberViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		2649D8B82745A45E00C36611 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2649D8B92745A46400C36611 /* Json */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2649D8B92745A46400C36611 /* Json */ = {
+			isa = PBXGroup;
+			children = (
+				2649D8BA2745A48900C36611 /* CountryCodes.json */,
+			);
+			path = Json;
+			sourceTree = "<group>";
+		};
+		2649D8BC2745A4B200C36611 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				2649D8BD2745A4CA00C36611 /* CountryCode.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		267865322745B12800DF062E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				267865332745B12800DF062E /* SimpleChatAppAPI.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -334,6 +398,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2649D8BB2745A48900C36611 /* CountryCodes.json in Resources */,
 				261AC094273C748400F3F1EA /* SignIn.storyboard in Resources */,
 				261AC065273C67E300F3F1EA /* LaunchScreen.storyboard in Resources */,
 				261AC062273C67E300F3F1EA /* Assets.xcassets in Resources */,
@@ -367,10 +432,13 @@
 				2649D8A827444AB100C36611 /* MainViewController.swift in Sources */,
 				2649D8A627444A7D00C36611 /* MainCoordinator.swift in Sources */,
 				261AC0A1273C78BE00F3F1EA /* utils.swift in Sources */,
+				2649D8B62745A24E00C36611 /* VerifyPhoneNumberViewModel.swift in Sources */,
 				2649D89A274037BB00C36611 /* AppCoordinator.swift in Sources */,
 				261AC059273C67E200F3F1EA /* AppDelegate.swift in Sources */,
+				2649D8B32745A20700C36611 /* VerifyPhoneNumberViewController.swift in Sources */,
 				2649D8AA27444ADB00C36611 /* MainViewModel.swift in Sources */,
 				2649D89C2740495A00C36611 /* SceneDelegate.swift in Sources */,
+				2649D8BE2745A4CA00C36611 /* CountryCode.swift in Sources */,
 				2649D8A3274313FD00C36611 /* Coordinator.swift in Sources */,
 				261AC098273C74AC00F3F1EA /* SignInViewModel.swift in Sources */,
 				2649D8AE27444C5A00C36611 /* MainTabBarViewController.swift in Sources */,

@@ -28,9 +28,12 @@
                                 <color key="textColor" red="0.303598702" green="0.79599159959999999" blue="0.47838050129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Read our Privacy Policy. Tab Agree &amp; Continue to accept to the terms of Service." textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuB-Ja-kEL">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" text="Read our Privacy Policy. Tab Agree &amp; Continue to accept to the terms of Service." textAlignment="center" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuB-Ja-kEL">
                                 <rect key="frame" x="80" y="610" width="254" height="73"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="73" id="XaC-BV-sRz"/>
+                                </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -63,7 +66,6 @@
                             <constraint firstItem="mmW-cU-uxJ" firstAttribute="top" secondItem="hUS-8z-BXz" secondAttribute="bottom" constant="78" id="j4j-G1-AGn"/>
                             <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="V07-Qa-v6Q" secondAttribute="bottom" constant="64" id="jk3-aD-ZnQ"/>
                             <constraint firstItem="hUS-8z-BXz" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="pF3-db-O2E"/>
-                            <constraint firstItem="AuB-Ja-kEL" firstAttribute="top" secondItem="mmW-cU-uxJ" secondAttribute="bottom" constant="84" id="pdW-HS-eta"/>
                             <constraint firstItem="mmW-cU-uxJ" firstAttribute="centerX" secondItem="vDu-zF-Fre" secondAttribute="centerX" id="rHp-D6-lNn"/>
                             <constraint firstItem="hUS-8z-BXz" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="v2p-wR-EwE"/>
                             <constraint firstItem="AuB-Ja-kEL" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="80" id="zBs-Qi-O7U"/>
@@ -79,6 +81,34 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="915.94202898550736" y="69.642857142857139"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="ZfX-4b-qef">
+            <objects>
+                <viewController id="slk-gg-H2s" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rs9-8o-w4w">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Verify your phone number" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4k5-D1-lvx">
+                                <rect key="frame" x="0.0" y="70" width="414" height="30"/>
+                                <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                                <color key="textColor" red="0.303598702" green="0.79599159959999999" blue="0.47838050129999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="oKf-h6-Uup"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4k5-D1-lvx" firstAttribute="centerX" secondItem="oKf-h6-Uup" secondAttribute="centerX" id="NaU-NA-Ko5"/>
+                            <constraint firstItem="4k5-D1-lvx" firstAttribute="width" secondItem="rs9-8o-w4w" secondAttribute="width" id="cNg-JQ-FXQ"/>
+                            <constraint firstItem="4k5-D1-lvx" firstAttribute="top" secondItem="oKf-h6-Uup" secondAttribute="top" constant="26" id="udM-Uw-yxj"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uVY-dl-jjq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1591" y="70"/>
         </scene>
     </scenes>
     <resources>
