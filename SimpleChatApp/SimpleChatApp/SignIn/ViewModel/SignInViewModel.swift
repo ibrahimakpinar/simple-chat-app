@@ -6,14 +6,26 @@
 //
 
 import Foundation
-class SignInViewModel {
-    let title: String
-    let termsAndConditions: String
-    let buttonTitle: String
-    init() {
-        self.title = "Welcome To App"
-        self.termsAndConditions = "Read our Privacy Policy. Tab Agree & Continue to accept to the terms of service"
-        self.buttonTitle = "AGREE & CONTINUE"
+
+protocol SignInViewModelProtocol {
+    func getTitle() -> String
+    func getTermsAndConditions() -> String
+    func getButtonTitle() -> String
+}
+
+class SignInViewModel: SignInViewModelProtocol {
+    init() {}
+    
+    func getTitle() -> String {
+        "Welcome To App"
+    }
+    
+    func getTermsAndConditions() -> String {
+        "Read our Privacy Policy. Tab Agree & Continue to accept to the terms of service"
+    }
+    
+    func getButtonTitle() -> String {
+        "AGREE & CONTINUE"
     }
 }
 

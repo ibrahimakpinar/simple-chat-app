@@ -8,11 +8,19 @@
 
 /* Begin PBXBuildFile section */
 		267865182745AE4C00DF062E /* SimpleChatAppAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2678650E2745AE4C00DF062E /* SimpleChatAppAPI.framework */; };
-		2678651D2745AE4C00DF062E /* SimpleChatAppAPITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678651C2745AE4C00DF062E /* SimpleChatAppAPITests.swift */; };
 		2678652A2745AF6800DF062E /* CountyCodeService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267865292745AF6800DF062E /* CountyCodeService.swift */; };
 		2678652E2745AFEF00DF062E /* CountryCodesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678652D2745AFEF00DF062E /* CountryCodesResponse.swift */; };
-		267865312745B04C00DF062E /* CountyCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267865302745B04C00DF062E /* CountyCode.swift */; };
-		267865372745B14400DF062E /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267865362745B14400DF062E /* Result.swift */; };
+		267865312745B04C00DF062E /* CountryCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267865302745B04C00DF062E /* CountryCode.swift */; };
+		2678653A274840AA00DF062E /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26786539274840AA00DF062E /* APIManager.swift */; };
+		2678653D2748443200DF062E /* APIEndpoints.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678653C2748443200DF062E /* APIEndpoints.swift */; };
+		267865482748475200DF062E /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 267865472748475200DF062E /* APIError.swift */; };
+		2678654B274848FD00DF062E /* APIManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678654A274848FD00DF062E /* APIManagerTests.swift */; };
+		2678654E27484A5D00DF062E /* APIClientTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2678654D27484A5D00DF062E /* APIClientTests.swift */; };
+		26786551274854D800DF062E /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 26786550274854D800DF062E /* countries.json */; };
+		26786552274855BF00DF062E /* countries.json in Resources */ = {isa = PBXBuildFile; fileRef = 26786550274854D800DF062E /* countries.json */; };
+		26786555274AE4F200DF062E /* Optional+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26786554274AE4F200DF062E /* Optional+Extensions.swift */; };
+		269CE0A1274AEDC9002374A0 /* ExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CE0A0274AEDC9002374A0 /* ExtensionsTests.swift */; };
+		269CE0A6274AEFF1002374A0 /* countryList.json in Resources */ = {isa = PBXBuildFile; fileRef = 269CE0A5274AEFF1002374A0 /* countryList.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,12 +37,19 @@
 		2678650E2745AE4C00DF062E /* SimpleChatAppAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SimpleChatAppAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		267865122745AE4C00DF062E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267865172745AE4C00DF062E /* SimpleChatAppAPITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SimpleChatAppAPITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		2678651C2745AE4C00DF062E /* SimpleChatAppAPITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SimpleChatAppAPITests.swift; sourceTree = "<group>"; };
 		2678651E2745AE4C00DF062E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		267865292745AF6800DF062E /* CountyCodeService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyCodeService.swift; sourceTree = "<group>"; };
 		2678652D2745AFEF00DF062E /* CountryCodesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodesResponse.swift; sourceTree = "<group>"; };
-		267865302745B04C00DF062E /* CountyCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountyCode.swift; sourceTree = "<group>"; };
-		267865362745B14400DF062E /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		267865302745B04C00DF062E /* CountryCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCode.swift; sourceTree = "<group>"; };
+		26786539274840AA00DF062E /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
+		2678653C2748443200DF062E /* APIEndpoints.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIEndpoints.swift; sourceTree = "<group>"; };
+		267865472748475200DF062E /* APIError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		2678654A274848FD00DF062E /* APIManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManagerTests.swift; sourceTree = "<group>"; };
+		2678654D27484A5D00DF062E /* APIClientTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClientTests.swift; sourceTree = "<group>"; };
+		26786550274854D800DF062E /* countries.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countries.json; sourceTree = "<group>"; };
+		26786554274AE4F200DF062E /* Optional+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Optional+Extensions.swift"; sourceTree = "<group>"; };
+		269CE0A0274AEDC9002374A0 /* ExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionsTests.swift; sourceTree = "<group>"; };
+		269CE0A5274AEFF1002374A0 /* countryList.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = countryList.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,10 +92,13 @@
 		267865102745AE4C00DF062E /* SimpleChatAppAPI */ = {
 			isa = PBXGroup;
 			children = (
-				267865352745B13800DF062E /* Helper */,
+				26786553274AE4BD00DF062E /* Extensions */,
+				2678654F274854C200DF062E /* Data */,
+				267865282745AF5800DF062E /* Client */,
+				2678653B2748441F00DF062E /* Common */,
+				267865382748409600DF062E /* Manager */,
 				2678652F2745B04200DF062E /* Models */,
 				2678652C2745AFD300DF062E /* Reponses */,
-				267865282745AF5800DF062E /* Client */,
 				267865122745AE4C00DF062E /* Info.plist */,
 			);
 			path = SimpleChatAppAPI;
@@ -89,7 +107,10 @@
 		2678651B2745AE4C00DF062E /* SimpleChatAppAPITests */ = {
 			isa = PBXGroup;
 			children = (
-				2678651C2745AE4C00DF062E /* SimpleChatAppAPITests.swift */,
+				269CE0A2274AEFB9002374A0 /* Data */,
+				269CE09F274AEDBB002374A0 /* Extensions */,
+				2678654C27484A4B00DF062E /* Client */,
+				26786549274848E000DF062E /* Manager */,
 				2678651E2745AE4C00DF062E /* Info.plist */,
 			);
 			path = SimpleChatAppAPITests;
@@ -114,17 +135,74 @@
 		2678652F2745B04200DF062E /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				267865302745B04C00DF062E /* CountyCode.swift */,
+				267865302745B04C00DF062E /* CountryCode.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
 		};
-		267865352745B13800DF062E /* Helper */ = {
+		267865382748409600DF062E /* Manager */ = {
 			isa = PBXGroup;
 			children = (
-				267865362745B14400DF062E /* Result.swift */,
+				26786539274840AA00DF062E /* APIManager.swift */,
+				2678653C2748443200DF062E /* APIEndpoints.swift */,
+				267865472748475200DF062E /* APIError.swift */,
 			);
-			path = Helper;
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2678653B2748441F00DF062E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		26786549274848E000DF062E /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				2678654A274848FD00DF062E /* APIManagerTests.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		2678654C27484A4B00DF062E /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				2678654D27484A5D00DF062E /* APIClientTests.swift */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		2678654F274854C200DF062E /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				26786550274854D800DF062E /* countries.json */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		26786553274AE4BD00DF062E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				26786554274AE4F200DF062E /* Optional+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		269CE09F274AEDBB002374A0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				269CE0A0274AEDC9002374A0 /* ExtensionsTests.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		269CE0A2274AEFB9002374A0 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				269CE0A5274AEFF1002374A0 /* countryList.json */,
+			);
+			path = Data;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -218,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				26786551274854D800DF062E /* countries.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +304,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269CE0A6274AEFF1002374A0 /* countryList.json in Resources */,
+				26786552274855BF00DF062E /* countries.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -235,10 +316,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2678653D2748443200DF062E /* APIEndpoints.swift in Sources */,
 				2678652E2745AFEF00DF062E /* CountryCodesResponse.swift in Sources */,
-				267865312745B04C00DF062E /* CountyCode.swift in Sources */,
-				267865372745B14400DF062E /* Result.swift in Sources */,
+				26786555274AE4F200DF062E /* Optional+Extensions.swift in Sources */,
+				267865312745B04C00DF062E /* CountryCode.swift in Sources */,
+				2678653A274840AA00DF062E /* APIManager.swift in Sources */,
 				2678652A2745AF6800DF062E /* CountyCodeService.swift in Sources */,
+				267865482748475200DF062E /* APIError.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -246,7 +330,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2678651D2745AE4C00DF062E /* SimpleChatAppAPITests.swift in Sources */,
+				2678654E27484A5D00DF062E /* APIClientTests.swift in Sources */,
+				269CE0A1274AEDC9002374A0 /* ExtensionsTests.swift in Sources */,
+				2678654B274848FD00DF062E /* APIManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

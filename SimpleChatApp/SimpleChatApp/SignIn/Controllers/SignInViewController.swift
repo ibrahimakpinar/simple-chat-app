@@ -6,33 +6,44 @@
 //
 
 import UIKit
+import SimpleChatAppAPI
 
 enum LinkType: String {
         case termsAndConditions
         case privacyPolicy
 }
 
+protocol SignInCoordinatorViewModelDelegate: class {
+    func openVerifyPhoneNumberView()
+}
+
 class SignInViewController: UIViewController, Storyboarded {
  
     var viewModel: SignInViewModel?
+    var delegate: SignInCoordinatorViewModelDelegate!
     
     @IBOutlet weak var lblTitle: UILabel!
     @IBOutlet weak var textTermsOfService: UITextView!
     @IBOutlet weak var btnAgreeAndContinue: UIButton!
-    weak var coordinator: SignInCoordinator?
+   
     
     override func viewDidLoad() {
         super.viewDidLoad()
         guard viewModel != nil else {
             fatalError("ohh boy! view model cannot be nil!")
         }
-        self.lblTitle.text = viewModel?.title
-        self.textTermsOfService.hyperLink(originalText: viewModel!.termsAndConditions, linkTextsAndTypes: ["terms of service": LinkType.termsAndConditions.rawValue,"Privacy Policy": LinkType.privacyPolicy.rawValue])
+        self.lblTitle.text = viewModel?.getTitle()
+        self.textTermsOfService.hyperLink(originalText: viewModel!.getTermsAndConditions(), linkTextsAndTypes: ["terms of service": LinkType.termsAndConditions.rawValue,"Privacy Policy": LinkType.privacyPolicy.rawValue])
         
-        self.btnAgreeAndContinue.setTitle(viewModel?.buttonTitle,for: UIControl.State.normal)
+        self.btnAgreeAndContinue.setTitle(viewModel?.getButtonTitle(),for: UIControl.State.normal)
     }
     
     @IBAction func agreeAndContinueTapped(_ sender: Any) {
+        delegate?.openVerifyPhoneNumberView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
 }

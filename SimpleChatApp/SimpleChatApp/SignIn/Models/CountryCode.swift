@@ -2,7 +2,7 @@
 //  CountryCode.swift
 //  SimpleChatApp
 //
-//  Created by PCMACEGITIM on 17.11.2021.
+//  Created by ibrahim akpinar on 17.11.2021.
 //
 
 import Foundation

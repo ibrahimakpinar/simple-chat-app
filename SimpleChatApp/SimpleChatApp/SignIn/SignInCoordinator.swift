@@ -7,9 +7,18 @@
 
 import UIKit
 import Foundation
+import SimpleChatAppAPI
+
+protocol SignInCoordinatorDelegate : class{
+    func dismiss()
+}
 
 class SignInCoordinator: Coordinator {
+    weak var coordinatorDelegate: SignInCoordinatorDelegate?
     weak var parentCoordinator: AppCoordinator?
+    
+    var apiManager: APIManager?
+    let apiClient: CountryCodeServiceProtocol!
     
     var childCoordinator: [Coordinator] = []
     
@@ -17,15 +26,35 @@ class SignInCoordinator: Coordinator {
     
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
+        self.apiManager  = APIManager()
+        self.apiClient = CountryCodeService(apiManager: self.apiManager as! APIManagerProtocol)
     }
     
     func start() {
         let vc = SignInViewController.instantiate(withStoryboardName: "SignIn")
         vc.viewModel = SignInViewModel()
-        vc.coordinator = self
-        self.navigationController.setNavigationBarHidden(true, animated: true)
+        vc.delegate = self
+        self.navigationController.navigationBar.tintColor = #colorLiteral(red: 0, green: 0.8089314699, blue: 0.443246007, alpha: 1)
+        self.navigationController.navigationBar.titleTextAttributes = [NSAttributedString.Key.foregroundColor: #colorLiteral(red: 0, green: 0.8089314699, blue: 0.443246007, alpha: 1)]
         self.navigationController.pushViewController(vc, animated: true)
     }
     
-  
+}
+
+extension SignInCoordinator: SignInCoordinatorViewModelDelegate {
+    func openVerifyPhoneNumberView() {
+        let vc = VerifyPhoneNumberViewController.instantiate(withStoryboardName: "SignIn")
+        
+        let viewModel = VerifyPhoneNumberViewModel(apiClient: self.apiClient)
+        viewModel.coordinatorDelegate = self
+        vc.viewModel = viewModel
+        self.navigationController.setNavigationBarHidden(false, animated: true)
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+}
+
+extension SignInCoordinator: VerifyPhoneNumberCoordinatorDelegate {
+    func dismiss() {
+        
+    }
 }
