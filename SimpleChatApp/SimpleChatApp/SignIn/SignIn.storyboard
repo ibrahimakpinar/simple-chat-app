@@ -111,6 +111,10 @@
                                                 <subviews>
                                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+90" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGk-Eo-S4X">
                                                         <rect key="frame" x="0.0" y="0.0" width="89.5" height="34"/>
+                                                        <accessibility key="accessibilityConfiguration">
+                                                            <accessibilityTraits key="traits" staticText="YES"/>
+                                                            <bool key="isElement" value="NO"/>
+                                                        </accessibility>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <textInputTraits key="textInputTraits"/>
                                                     </textField>
@@ -157,13 +161,40 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="lblCountryCode" destination="JGk-Eo-S4X" id="msx-3G-65N"/>
-                        <outlet property="lblPhoneNumber" destination="erX-wt-fEn" id="jfl-nI-cLL"/>
+                        <outlet property="textCountryCode" destination="JGk-Eo-S4X" id="7Gh-k9-e5q"/>
+                        <outlet property="textPhoneNumber" destination="erX-wt-fEn" id="oRi-Yc-kqq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVY-dl-jjq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1589.8550724637682" y="69.642857142857139"/>
+        </scene>
+        <!--Country Code List View Controller-->
+        <scene sceneID="7oG-IH-Kkq">
+            <objects>
+                <viewController storyboardIdentifier="CountryCodeListViewController" id="MnO-0y-CgY" customClass="CountryCodeListViewController" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9SS-eP-skn">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Fcy-W1-l6Y">
+                                <rect key="frame" x="0.0" y="21" width="414" height="864"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NKy-kF-YbE"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fcy-W1-l6Y" firstAttribute="height" secondItem="9SS-eP-skn" secondAttribute="height" multiplier="0.964286" id="OsH-Fu-Kyq"/>
+                            <constraint firstItem="Fcy-W1-l6Y" firstAttribute="width" secondItem="9SS-eP-skn" secondAttribute="width" id="oXX-cK-18O"/>
+                            <constraint firstItem="Fcy-W1-l6Y" firstAttribute="centerX" secondItem="NKy-kF-YbE" secondAttribute="centerX" id="y0A-Ur-2rt"/>
+                            <constraint firstItem="Fcy-W1-l6Y" firstAttribute="centerY" secondItem="NKy-kF-YbE" secondAttribute="centerY" id="yar-0X-3KI"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lQn-Pm-hrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2269.5652173913045" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>

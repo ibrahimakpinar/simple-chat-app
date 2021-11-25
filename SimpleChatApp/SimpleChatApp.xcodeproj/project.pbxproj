@@ -34,6 +34,8 @@
 		267865342745B12800DF062E /* SimpleChatAppAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 267865332745B12800DF062E /* SimpleChatAppAPI.framework */; };
 		269CE0A8274EE395002374A0 /* KeyboardLayoutConstraint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CE0A7274EE395002374A0 /* KeyboardLayoutConstraint.swift */; };
 		269CE0AA274EEBFE002374A0 /* UITextField+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CE0A9274EEBFE002374A0 /* UITextField+Extensions.swift */; };
+		269CE0AC27503500002374A0 /* CountryCodeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CE0AB27503500002374A0 /* CountryCodeListViewController.swift */; };
+		269CE0AE2750362D002374A0 /* CountryCodeListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269CE0AD2750362D002374A0 /* CountryCodeListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -87,6 +89,8 @@
 		267865332745B12800DF062E /* SimpleChatAppAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = SimpleChatAppAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		269CE0A7274EE395002374A0 /* KeyboardLayoutConstraint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyboardLayoutConstraint.swift; sourceTree = "<group>"; };
 		269CE0A9274EEBFE002374A0 /* UITextField+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Extensions.swift"; sourceTree = "<group>"; };
+		269CE0AB27503500002374A0 /* CountryCodeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeListViewController.swift; sourceTree = "<group>"; };
+		269CE0AD2750362D002374A0 /* CountryCodeListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryCodeListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -254,6 +258,7 @@
 			children = (
 				261AC097273C74AC00F3F1EA /* SignInViewModel.swift */,
 				2649D8B52745A24E00C36611 /* VerifyPhoneNumberViewModel.swift */,
+				269CE0AD2750362D002374A0 /* CountryCodeListViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -263,6 +268,7 @@
 			children = (
 				2649D897273F1D0200C36611 /* SignInViewController.swift */,
 				2649D8B22745A20700C36611 /* VerifyPhoneNumberViewController.swift */,
+				269CE0AB27503500002374A0 /* CountryCodeListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -421,6 +427,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				269CE0AE2750362D002374A0 /* CountryCodeListViewModel.swift in Sources */,
 				2649D8A127430A5B00C36611 /* Storyboardable.swift in Sources */,
 				2649D8B12744566300C36611 /* UITextView+Extensions.swift in Sources */,
 				2649D8A827444AB100C36611 /* MainViewController.swift in Sources */,
@@ -429,6 +436,7 @@
 				261AC0A1273C78BE00F3F1EA /* utils.swift in Sources */,
 				2649D8B62745A24E00C36611 /* VerifyPhoneNumberViewModel.swift in Sources */,
 				2649D89A274037BB00C36611 /* AppCoordinator.swift in Sources */,
+				269CE0AC27503500002374A0 /* CountryCodeListViewController.swift in Sources */,
 				261AC059273C67E200F3F1EA /* AppDelegate.swift in Sources */,
 				2649D8B32745A20700C36611 /* VerifyPhoneNumberViewController.swift in Sources */,
 				2649D8AA27444ADB00C36611 /* MainViewModel.swift in Sources */,

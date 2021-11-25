@@ -45,8 +45,8 @@ extension SignInCoordinator: SignInCoordinatorViewModelDelegate {
     func openVerifyPhoneNumberView() {
         let vc = VerifyPhoneNumberViewController.instantiate(withStoryboardName: "SignIn")
         
-        let viewModel = VerifyPhoneNumberViewModel(apiClient: self.apiClient)
-        viewModel.coordinatorDelegate = self
+        let viewModel = VerifyPhoneNumberViewModel(delegate: self)
+        //viewModel.coordinatorDelegate = self
         vc.viewModel = viewModel
         self.navigationController.setNavigationBarHidden(false, animated: true)
         self.navigationController.pushViewController(vc, animated: true)
@@ -54,6 +54,16 @@ extension SignInCoordinator: SignInCoordinatorViewModelDelegate {
 }
 
 extension SignInCoordinator: VerifyPhoneNumberCoordinatorDelegate {
+    func openCountryCodeListView() {
+        let vc = CountryCodeListViewController.instantiate(withStoryboardName: "SignIn")
+        
+        let viewModel = CountryCodeListViewModel(apiClient:  self.apiClient)
+        
+        vc.viewModel = viewModel
+        self.navigationController.setNavigationBarHidden(false, animated: true)
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+    
     func dismiss() {
         
     }

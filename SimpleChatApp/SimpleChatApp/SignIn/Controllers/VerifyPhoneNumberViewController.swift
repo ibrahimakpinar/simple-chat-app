@@ -8,15 +8,20 @@
 import UIKit
 
 class VerifyPhoneNumberViewController: UIViewController, Storyboarded {
-    @IBOutlet weak var lblCountryCode: UITextField!
-    @IBOutlet weak var lblPhoneNumber: UITextField!
+    @IBOutlet weak var textCountryCode: UITextField!
+    @IBOutlet weak var textPhoneNumber: UITextField!
     var viewModel: VerifyPhoneNumberViewModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = viewModel?.getTitle()
-        viewModel?.load()
-        self.lblCountryCode.addBottomBorder()
-        self.lblPhoneNumber.addBottomBorder()
+        self.textCountryCode.addBottomBorder()
+        self.textPhoneNumber.addBottomBorder()
+        
+        self.textCountryCode.addTarget(self, action: #selector(countryCodeOnTapped), for: .touchDown)
+    }
+    
+    @objc func countryCodeOnTapped(_ sender: Any) {
+        viewModel?.openCountryCodeListView()
     }
 }
