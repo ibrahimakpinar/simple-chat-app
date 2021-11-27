@@ -13,23 +13,29 @@ class CountryCodeListViewController: UIViewController, Storyboarded {
 
     @IBOutlet weak var tableView: UITableView!
     
+    // MARK: - Check For Is Filtering
     var isSearchBarEmpty: Bool {
       return searchController.searchBar.text?.isEmpty ?? true
     }
     
+    // MARK: - Search Bar Filtering is active?
     var isFiltering: Bool {
       return searchController.isActive && !isSearchBarEmpty
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.title = viewModel?.getTitle()
+        
         viewModel?.load()
+        
         self.setupTableView()
         
         self.setupSearchBar()
     }
     
+    // MARK: - Setup Table View and register resusable cell
     private func setupTableView() {
         tableView.delegate = self
         tableView.dataSource = self
@@ -38,16 +44,13 @@ class CountryCodeListViewController: UIViewController, Storyboarded {
         tableView.reloadData()
     }
 
+    // MARK: - Setup Search Bar
     public func setupSearchBar() {
         searchController.searchResultsUpdater = self
-        
-        searchController.obscuresBackgroundDuringPresentation = false
         
         searchController.searchBar.placeholder = "Search Countries"
         
         navigationItem.searchController = searchController
-        
-        definesPresentationContext = true
     }
 }
 
@@ -74,11 +77,13 @@ extension CountryCodeListViewController: UITableViewDelegate, UITableViewDataSou
         return cell
     }
     
+    // MARK: - Set tableView row heigth to fit for country images
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
 }
 
+// MARK: Extensions for Searchbar
 extension CountryCodeListViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {
         let searchBar = searchController.searchBar
