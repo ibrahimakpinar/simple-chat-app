@@ -14,7 +14,9 @@ protocol CountryCodeListViewModelProtocol {
 }
 
 final class CountryCodeListViewModel: CountryCodeListViewModelProtocol {
-    var apiClient: CountryCodeServiceProtocol!
+    private var apiClient: CountryCodeServiceProtocol!
+    var countries: [CountryCode]?
+    var filteredCountries: [CountryCode]?
   
     init(apiClient: CountryCodeServiceProtocol) {
         self.apiClient = apiClient
@@ -28,10 +30,16 @@ final class CountryCodeListViewModel: CountryCodeListViewModelProtocol {
         self.apiClient.fetchCountryCodes { [weak self] (result) in
             switch result {
             case .success(let response):
-                print(response.countries)
+                self?.countries  = response.countries
             case .failure(let error):
                print(error)
             }
+        }
+    }
+    
+    func filter(searchText: String) {
+        self.filteredCountries = self.countries?.filter {(countryCode: CountryCode) -> Bool in
+            return countryCode.name.lowercased().contains(searchText.lowercased())
         }
     }
 }

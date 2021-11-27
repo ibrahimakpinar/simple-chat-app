@@ -58,7 +58,6 @@ extension SignInCoordinator: VerifyPhoneNumberCoordinatorDelegate {
         let vc = CountryCodeListViewController.instantiate(withStoryboardName: "SignIn")
         
         let viewModel = CountryCodeListViewModel(apiClient:  self.apiClient)
-        
         vc.viewModel = viewModel
         self.navigationController.setNavigationBarHidden(false, animated: true)
         self.navigationController.pushViewController(vc, animated: true)

@@ -8,6 +8,7 @@
 import Foundation
 
 struct CountryCode {
-    let code: String
-    let name: String
+    var code: String? = ""
+    var name: String? = ""
+    var dialCode: String = ""
 }

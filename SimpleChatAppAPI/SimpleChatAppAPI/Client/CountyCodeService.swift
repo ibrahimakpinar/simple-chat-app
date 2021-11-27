@@ -20,11 +20,12 @@ public class CountryCodeService : CountryCodeServiceProtocol {
     }
     
     public func fetchCountryCodes(completion: @escaping (Result<CountryCodesResponse, Error>) -> Void) {
-         apiManager.fetchLocalJSONData(with: ApiEndPoints.countries.urlString) {(response: Result<CountryCodesResponse, Error>)  in
+         apiManager.fetchLocalJSONData(with: ApiEndPoints.Countries.urlString) {(response: Result<CountryCodesResponse, Error>)  in
              switch response {
              case .success(let response):
                 completion(.success(response))
              case .failure(let error):
+                print(error)
                 completion(.failure(APIError.invalidResponse))
              }
           }

@@ -16,7 +16,7 @@ class APIClientTests: XCTestCase {
         let response = try JSONDecoder().decode(CountryCodesResponse.self, from: data)
         let countries = response.countries
         
-        XCTAssertEqual(countries[0].code,"+90")
+        XCTAssertEqual(countries[0].dialCode,"+90")
         XCTAssertEqual(countries[0].name,"Turkey")
     }
     

@@ -8,7 +8,7 @@
 import Foundation
 
 public enum ApiEndPoints: String {
-    case countries = "countries"
+    case Countries = "Countries"
   
     public var urlString: String{
         self.rawValue

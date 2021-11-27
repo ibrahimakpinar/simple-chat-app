@@ -13,7 +13,7 @@ class APIManagerTests: XCTestCase {
         var completionCalled = false
         let apiManager = APIManager()
         
-        try apiManager.fetchLocalJSONData(with: ApiEndPoints.countries.urlString) {(_ result: Result<CountryCodesResponse, Error>) in
+        try apiManager.fetchLocalJSONData(with: ApiEndPoints.Countries.urlString) {(_ result: Result<CountryCodesResponse, Error>) in
             completionCalled = true
         }
         

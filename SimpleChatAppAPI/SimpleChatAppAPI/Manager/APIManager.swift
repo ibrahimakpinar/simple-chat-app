@@ -2,7 +2,7 @@
 //  APIManager.swift
 //  SimpleChatAppAPI
 //
-//  Created by ibrahim akpinar on 19.11.2021.
+//  Created by PCMACEGITIM on 19.11.2021.
 //
 import Foundation
 import Combine
@@ -23,11 +23,12 @@ public class APIManager: APIManagerProtocol {
         let decoder = JSONDecoder()
         
         do {
+            let bundle = Bundle(for: type(of: self))
             let url = try bundle.url(forResource: endPoint, withExtension: "json").unwrap()
             let data = try Data(contentsOf: url)
-            let countries = try decoder.decode(T.self, from: data)
+            let response = try JSONDecoder().decode(CountryCodesResponse.self, from: data)
         
-            completion(.success(countries))
+            completion(.success(response as! T))
         } catch {
             completion(.failure(error))
         }

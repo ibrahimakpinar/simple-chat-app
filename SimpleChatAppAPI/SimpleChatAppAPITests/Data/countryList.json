@@ -1,8 +1,10 @@
 {
   "countries": [
     {
-        "code": "+90",
-        "name": "Turkey"
+        "name": "Turkey",
+        "dialCode": "+90",
+        "code": "TR",
+        "flag": "🇹🇷"
     }
   ]
 }
