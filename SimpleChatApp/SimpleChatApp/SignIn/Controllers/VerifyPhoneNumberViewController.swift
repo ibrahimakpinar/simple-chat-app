@@ -24,7 +24,7 @@ class VerifyPhoneNumberViewController: UIViewController, Storyboarded {
     }
     
     @objc func countryCodeOnTapped(_ sender: Any) {
-        viewModel?.openCountryCodeListView(self)
+        viewModel?.openCountryCodeListView(withSelf: self)
     }
 }
 
