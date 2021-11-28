@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SimpleChatAppAPI
 
 class VerifyPhoneNumberViewController: UIViewController, Storyboarded {
     @IBOutlet weak var textCountryCode: UITextField!
@@ -18,10 +19,20 @@ class VerifyPhoneNumberViewController: UIViewController, Storyboarded {
         self.textCountryCode.addBottomBorder()
         self.textPhoneNumber.addBottomBorder()
         
-        self.textCountryCode.addTarget(self, action: #selector(countryCodeOnTapped), for: .touchDown)
+        self.textCountryCode.addTarget(self, action: #selector(countryCodeOnTapped),
+                                       for: .touchDown)
     }
     
     @objc func countryCodeOnTapped(_ sender: Any) {
-        viewModel?.openCountryCodeListView()
+        viewModel?.openCountryCodeListView(self)
+    }
+}
+
+
+//MARK: CountryCodeListView Extensions
+extension VerifyPhoneNumberViewController: CountryCodeListCoordinatorDelegate {
+    func didSelect(countryCode: CountryCode) {
+        self.navigationController?.popViewController(animated: true)
+        self.textCountryCode.text = countryCode.dialCode
     }
 }

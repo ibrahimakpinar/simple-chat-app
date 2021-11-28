@@ -47,6 +47,8 @@ class CountryCodeListViewController: UIViewController, Storyboarded {
     // MARK: - Setup Search Bar
     public func setupSearchBar() {
         searchController.searchResultsUpdater = self
+        //set it false to enabled didSelectRowAtIndexPath for selects filtered row
+        searchController.obscuresBackgroundDuringPresentation = false
         
         searchController.searchBar.placeholder = "Search Countries"
         
@@ -81,6 +83,17 @@ extension CountryCodeListViewController: UITableViewDelegate, UITableViewDataSou
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100.0
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if isFiltering {
+            let selected = viewModel?.filteredCountries![indexPath.row]
+            viewModel?.didSelect(countryCode: selected!)
+        } else {
+            
+            let selected = viewModel?.countries![indexPath.row]
+            viewModel?.didSelect(countryCode: selected!)
+        }
+    }
 }
 
 // MARK: Extensions for Searchbar
@@ -91,3 +104,4 @@ extension CountryCodeListViewController: UISearchResultsUpdating {
         tableView.reloadData()
     }
 }
+

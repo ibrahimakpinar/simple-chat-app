@@ -6,18 +6,23 @@
 //
 
 import Foundation
-
+import SimpleChatAppAPI
 
 protocol VerifyPhoneNumberCoordinatorDelegate {
     func dismiss()
-    func openCountryCodeListView()
+    func openCountryCodeListView(_ self: VerifyPhoneNumberViewController)
 }
 
 protocol VerifyPhoneNumberViewModelProtocol {
     func getTitle() -> String
+    func didCountryCodeSelect(countryCode: CountryCode)
 }
 
 final class VerifyPhoneNumberViewModel: VerifyPhoneNumberViewModelProtocol {
+    func didCountryCodeSelect(countryCode: CountryCode) {
+        
+    }
+    
     private var coordinatorDelegate: VerifyPhoneNumberCoordinatorDelegate?
     
     init(delegate: VerifyPhoneNumberCoordinatorDelegate) {
@@ -28,7 +33,7 @@ final class VerifyPhoneNumberViewModel: VerifyPhoneNumberViewModelProtocol {
         return "Verify your phone number"
     }
     
-    func openCountryCodeListView(){
-        coordinatorDelegate?.openCountryCodeListView()
+    func openCountryCodeListView(_ vcSelf: VerifyPhoneNumberViewController){
+        coordinatorDelegate?.openCountryCodeListView(vcSelf)
     }
 }

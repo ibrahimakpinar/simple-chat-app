@@ -13,10 +13,15 @@ protocol CountryCodeListViewModelProtocol {
     func getTitle() -> String
 }
 
+protocol CountryCodeListCoordinatorDelegate {
+    func didSelect(countryCode: CountryCode)
+}
+
 final class CountryCodeListViewModel: CountryCodeListViewModelProtocol {
     private var apiClient: CountryCodeServiceProtocol!
     var countries: [CountryCode]?
     var filteredCountries: [CountryCode]?
+    var coordinatorDelegate: CountryCodeListCoordinatorDelegate?
   
     init(apiClient: CountryCodeServiceProtocol) {
         self.apiClient = apiClient
@@ -41,5 +46,9 @@ final class CountryCodeListViewModel: CountryCodeListViewModelProtocol {
         self.filteredCountries = self.countries?.filter {(countryCode: CountryCode) -> Bool in
             return countryCode.name.lowercased().contains(searchText.lowercased())
         }
+    }
+    
+    func didSelect(countryCode: CountryCode) {
+        coordinatorDelegate?.didSelect(countryCode: countryCode)
     }
 }
