@@ -44,10 +44,9 @@ class SignInCoordinator: Coordinator {
 extension SignInCoordinator: SignInCoordinatorViewModelDelegate {
     func openVerifyPhoneNumberView() {
         let vc = VerifyPhoneNumberViewController.instantiate(withStoryboardName: "SignIn")
-        
         let viewModel = VerifyPhoneNumberViewModel(delegate: self)
-        //viewModel.coordinatorDelegate = self
         vc.viewModel = viewModel
+        
         self.navigationController.setNavigationBarHidden(false, animated: true)
         self.navigationController.pushViewController(vc, animated: true)
     }

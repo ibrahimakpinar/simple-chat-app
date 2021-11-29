@@ -1,4 +1,10 @@
 {  "countries": [
+    {
+      "name": "Turkey",
+      "dialCode": "+90",
+      "code": "TR",
+      "flag": "🇹🇷"
+    },
   {
     "name": "Afghanistan",
     "dialCode": "+93",
@@ -1320,12 +1326,6 @@
     "dialCode": "+216",
     "code": "TN",
     "flag": "🇹🇳"
-  },
-  {
-    "name": "Turkey",
-    "dialCode": "+90",
-    "code": "TR",
-    "flag": "🇹🇷"
   },
   {
     "name": "Turkmenistan",
