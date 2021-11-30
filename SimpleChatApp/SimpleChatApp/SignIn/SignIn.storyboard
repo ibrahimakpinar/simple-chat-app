@@ -96,6 +96,13 @@
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EZJ-yI-bNl">
                                         <rect key="frame" x="41.5" y="243.5" width="331" height="331"/>
                                         <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXz-On-oYM">
+                                                <rect key="frame" x="33" y="285" width="265" height="30"/>
+                                                <state key="normal" title="Verify"/>
+                                                <connections>
+                                                    <action selector="verifyButtonTapped:" destination="slk-gg-H2s" eventType="touchUpInside" id="fSx-n0-gqf"/>
+                                                </connections>
+                                            </button>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="App will send an SMS message (carrier charges may apply) to verify your phone number. Enter your country code and phone number." textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="BQq-DK-6NH">
                                                 <rect key="frame" x="16.5" y="8" width="298" height="90"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -106,44 +113,49 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
-                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="19" translatesAutoresizingMaskIntoConstraints="NO" id="HdH-ss-z3q">
-                                                <rect key="frame" x="16.5" y="148.5" width="298" height="34"/>
-                                                <subviews>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+90" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGk-Eo-S4X">
-                                                        <rect key="frame" x="0.0" y="0.0" width="89.5" height="34"/>
-                                                        <accessibility key="accessibilityConfiguration">
-                                                            <accessibilityTraits key="traits" staticText="YES"/>
-                                                            <bool key="isElement" value="NO"/>
-                                                        </accessibility>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="555-444-33-22" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erX-wt-fEn">
-                                                        <rect key="frame" x="108.5" y="0.0" width="189.5" height="34"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                        <textInputTraits key="textInputTraits"/>
-                                                    </textField>
-                                                </subviews>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="+90 (Turkey)" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JGk-Eo-S4X">
+                                                <rect key="frame" x="16.5" y="108" width="298" height="40"/>
+                                                <accessibility key="accessibilityConfiguration">
+                                                    <accessibilityTraits key="traits" staticText="YES"/>
+                                                    <bool key="isElement" value="NO"/>
+                                                </accessibility>
                                                 <constraints>
-                                                    <constraint firstItem="JGk-Eo-S4X" firstAttribute="width" secondItem="HdH-ss-z3q" secondAttribute="width" multiplier="0.3" id="1th-Xw-1Wh"/>
-                                                    <constraint firstAttribute="trailing" secondItem="erX-wt-fEn" secondAttribute="trailing" id="M5e-P4-RuC"/>
-                                                    <constraint firstItem="JGk-Eo-S4X" firstAttribute="leading" secondItem="HdH-ss-z3q" secondAttribute="leading" id="wRV-41-e76"/>
+                                                    <constraint firstAttribute="height" constant="40" id="OJV-Ku-MyB"/>
                                                 </constraints>
-                                            </stackView>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                            </textField>
+                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="555-444-33-22" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="erX-wt-fEn">
+                                                <rect key="frame" x="16.5" y="158" width="298" height="40"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="OLy-kO-N9h"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="tel"/>
+                                                <connections>
+                                                    <action selector="phoneNumberEditingChanged:" destination="slk-gg-H2s" eventType="editingChanged" id="8lO-WM-KEG"/>
+                                                </connections>
+                                            </textField>
                                         </subviews>
-                                        <color key="backgroundColor" systemColor="systemYellowColor"/>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
                                         <constraints>
                                             <constraint firstItem="BQq-DK-6NH" firstAttribute="centerX" secondItem="EZJ-yI-bNl" secondAttribute="centerX" id="19I-7s-fT1"/>
                                             <constraint firstItem="BQq-DK-6NH" firstAttribute="top" secondItem="EZJ-yI-bNl" secondAttribute="top" constant="8" id="6mE-1g-e9B"/>
-                                            <constraint firstItem="HdH-ss-z3q" firstAttribute="centerY" secondItem="EZJ-yI-bNl" secondAttribute="centerY" id="7Je-3H-APw"/>
-                                            <constraint firstItem="HdH-ss-z3q" firstAttribute="centerX" secondItem="EZJ-yI-bNl" secondAttribute="centerX" id="aPN-9u-Z3j"/>
-                                            <constraint firstItem="HdH-ss-z3q" firstAttribute="width" secondItem="EZJ-yI-bNl" secondAttribute="width" multiplier="0.9" id="duu-kv-dof"/>
+                                            <constraint firstItem="JGk-Eo-S4X" firstAttribute="width" secondItem="EZJ-yI-bNl" secondAttribute="width" multiplier="0.9" id="7eU-ue-fL2"/>
+                                            <constraint firstItem="erX-wt-fEn" firstAttribute="centerX" secondItem="EZJ-yI-bNl" secondAttribute="centerX" id="Azc-QI-YeQ"/>
+                                            <constraint firstItem="JGk-Eo-S4X" firstAttribute="centerX" secondItem="EZJ-yI-bNl" secondAttribute="centerX" id="Ds1-ZQ-oYw"/>
+                                            <constraint firstItem="HXz-On-oYM" firstAttribute="width" secondItem="EZJ-yI-bNl" secondAttribute="width" multiplier="0.8" id="Qvz-O7-jEH"/>
+                                            <constraint firstItem="HXz-On-oYM" firstAttribute="centerX" secondItem="EZJ-yI-bNl" secondAttribute="centerX" id="bVP-g0-ERv"/>
+                                            <constraint firstItem="erX-wt-fEn" firstAttribute="width" secondItem="JGk-Eo-S4X" secondAttribute="width" id="jf9-XL-Dbl"/>
+                                            <constraint firstItem="erX-wt-fEn" firstAttribute="top" secondItem="JGk-Eo-S4X" secondAttribute="bottom" constant="10" id="l6X-S6-Xp7"/>
+                                            <constraint firstAttribute="bottom" secondItem="HXz-On-oYM" secondAttribute="bottom" constant="16" id="mjd-mO-nka"/>
                                             <constraint firstItem="BQq-DK-6NH" firstAttribute="width" secondItem="EZJ-yI-bNl" secondAttribute="width" multiplier="0.9" id="neg-IJ-1Gy"/>
                                             <constraint firstAttribute="width" secondItem="EZJ-yI-bNl" secondAttribute="height" multiplier="1:1" id="nsd-p1-PUw"/>
+                                            <constraint firstItem="JGk-Eo-S4X" firstAttribute="top" secondItem="BQq-DK-6NH" secondAttribute="bottom" constant="10" id="ygR-G5-rWx"/>
                                         </constraints>
                                     </view>
                                 </subviews>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
                                     <constraint firstItem="EZJ-yI-bNl" firstAttribute="width" secondItem="Be1-5I-Cqy" secondAttribute="width" multiplier="0.8" id="cCW-iR-ZZd"/>
                                     <constraint firstItem="EZJ-yI-bNl" firstAttribute="centerX" secondItem="Be1-5I-Cqy" secondAttribute="centerX" id="cR3-LO-dxW"/>
@@ -163,6 +175,7 @@
                     <connections>
                         <outlet property="textCountryCode" destination="JGk-Eo-S4X" id="7Gh-k9-e5q"/>
                         <outlet property="textPhoneNumber" destination="erX-wt-fEn" id="oRi-Yc-kqq"/>
+                        <outlet property="verifyButton" destination="HXz-On-oYM" id="BHX-7b-gfm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uVY-dl-jjq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -218,8 +231,8 @@
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
-        <systemColor name="systemYellowColor">
-            <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
