@@ -173,6 +173,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="cardView" destination="EZJ-yI-bNl" id="ER5-8T-Hrz"/>
                         <outlet property="textCountryCode" destination="JGk-Eo-S4X" id="7Gh-k9-e5q"/>
                         <outlet property="textPhoneNumber" destination="erX-wt-fEn" id="oRi-Yc-kqq"/>
                         <outlet property="verifyButton" destination="HXz-On-oYM" id="BHX-7b-gfm"/>
@@ -221,6 +222,132 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lQn-Pm-hrv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2269.5652173913045" y="69.642857142857139"/>
+        </scene>
+        <!--Verification View Controller-->
+        <scene sceneID="gg7-II-sWL">
+            <objects>
+                <viewController storyboardIdentifier="SMSVerificationViewController" id="sRc-CC-LqY" customClass="SMSVerificationViewController" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yg1-4O-GDK">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2zC-ke-esM">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="S8O-uH-xaR">
+                                        <rect key="frame" x="41.5" y="243.5" width="331" height="331"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the 6-digit code we sent to +905393739394 " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a3v-yk-REQ">
+                                                <rect key="frame" x="8" y="8" width="315" height="60"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="60" id="6Dc-EI-9P6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BVs-AI-vQ4">
+                                                <rect key="frame" x="16.5" y="96" width="298" height="40"/>
+                                                <subviews>
+                                                    <textField opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YXd-f8-wxq">
+                                                        <rect key="frame" x="0.0" y="0.0" width="41.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                                        <connections>
+                                                            <action selector="digitEntered:" destination="sRc-CC-LqY" eventType="editingChanged" id="F8f-7I-qA7"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="G5m-pA-gDo">
+                                                        <rect key="frame" x="51.5" y="0.0" width="41" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                                        <connections>
+                                                            <action selector="digitEntered:" destination="sRc-CC-LqY" eventType="editingChanged" id="yJE-mO-rKW"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W23-YZ-S2C">
+                                                        <rect key="frame" x="102.5" y="0.0" width="41.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                                        <connections>
+                                                            <action selector="digitEntered:" destination="sRc-CC-LqY" eventType="editingChanged" id="ibh-t8-aB4"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="hHa-Zq-P84">
+                                                        <rect key="frame" x="154" y="0.0" width="41.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                                        <connections>
+                                                            <action selector="digitEntered:" destination="sRc-CC-LqY" eventType="editingChanged" id="JHR-Ah-Ars"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="cSb-PP-xoH">
+                                                        <rect key="frame" x="205.5" y="0.0" width="41" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                                        <connections>
+                                                            <action selector="digitEntered:" destination="sRc-CC-LqY" eventType="editingChanged" id="aBt-ta-N5f"/>
+                                                        </connections>
+                                                    </textField>
+                                                    <textField opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kF1-dZ-0qi">
+                                                        <rect key="frame" x="256.5" y="0.0" width="41.5" height="40"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                        <textInputTraits key="textInputTraits" keyboardType="numberPad" textContentType="one-time-code"/>
+                                                        <connections>
+                                                            <action selector="digitEntered:" destination="sRc-CC-LqY" eventType="editingChanged" id="cvQ-ds-bpk"/>
+                                                        </connections>
+                                                    </textField>
+                                                </subviews>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="40" id="f0E-DO-awF"/>
+                                                </constraints>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                        <constraints>
+                                            <constraint firstItem="a3v-yk-REQ" firstAttribute="width" secondItem="S8O-uH-xaR" secondAttribute="width" constant="-16" id="RB4-xP-8Kt"/>
+                                            <constraint firstItem="BVs-AI-vQ4" firstAttribute="top" secondItem="a3v-yk-REQ" secondAttribute="bottom" constant="28" id="XfG-9m-xjS"/>
+                                            <constraint firstItem="a3v-yk-REQ" firstAttribute="centerX" secondItem="S8O-uH-xaR" secondAttribute="centerX" id="Xgd-Da-EMp"/>
+                                            <constraint firstItem="BVs-AI-vQ4" firstAttribute="centerX" secondItem="S8O-uH-xaR" secondAttribute="centerX" id="cyG-U8-Oww"/>
+                                            <constraint firstAttribute="width" secondItem="S8O-uH-xaR" secondAttribute="height" multiplier="1:1" id="dkE-5h-1CW"/>
+                                            <constraint firstAttribute="trailing" secondItem="a3v-yk-REQ" secondAttribute="trailing" constant="8" id="e2F-or-L0S"/>
+                                            <constraint firstItem="BVs-AI-vQ4" firstAttribute="width" secondItem="S8O-uH-xaR" secondAttribute="width" multiplier="0.9" id="gSb-gX-LMb"/>
+                                            <constraint firstItem="a3v-yk-REQ" firstAttribute="top" secondItem="S8O-uH-xaR" secondAttribute="top" constant="8" id="kGh-7F-H8W"/>
+                                            <constraint firstItem="a3v-yk-REQ" firstAttribute="leading" secondItem="S8O-uH-xaR" secondAttribute="leading" constant="8" id="yO8-d7-UIG"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="S8O-uH-xaR" firstAttribute="centerY" secondItem="2zC-ke-esM" secondAttribute="centerY" id="L8U-Zb-fJp"/>
+                                    <constraint firstItem="S8O-uH-xaR" firstAttribute="centerX" secondItem="2zC-ke-esM" secondAttribute="centerX" id="nCP-De-K9c"/>
+                                    <constraint firstItem="S8O-uH-xaR" firstAttribute="width" secondItem="2zC-ke-esM" secondAttribute="width" multiplier="0.8" id="xEY-Od-hxq"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Oac-p7-bSv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="2zC-ke-esM" firstAttribute="top" secondItem="Oac-p7-bSv" secondAttribute="top" id="7PI-62-l7d"/>
+                            <constraint firstItem="Oac-p7-bSv" firstAttribute="bottom" secondItem="2zC-ke-esM" secondAttribute="bottom" id="OFk-Ak-4h7" customClass="KeyboardLayoutConstraint" customModule="SimpleChatApp" customModuleProvider="target"/>
+                            <constraint firstItem="2zC-ke-esM" firstAttribute="leading" secondItem="Oac-p7-bSv" secondAttribute="leading" id="jDf-id-5Jd"/>
+                            <constraint firstItem="2zC-ke-esM" firstAttribute="trailing" secondItem="Oac-p7-bSv" secondAttribute="trailing" id="tem-Ph-nDB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="cardView" destination="S8O-uH-xaR" id="doS-IU-Jhc"/>
+                        <outlet property="fifthDigit" destination="cSb-PP-xoH" id="kNP-WL-wJx"/>
+                        <outlet property="firstDigit" destination="YXd-f8-wxq" id="hst-91-1ut"/>
+                        <outlet property="fourthDigit" destination="hHa-Zq-P84" id="41y-tt-fMe"/>
+                        <outlet property="lblDescription" destination="a3v-yk-REQ" id="lyX-Rn-tRw"/>
+                        <outlet property="secondDigit" destination="G5m-pA-gDo" id="eZN-dM-Qcw"/>
+                        <outlet property="sixthDigit" destination="kF1-dZ-0qi" id="ed8-Qd-86Q"/>
+                        <outlet property="thirdDigit" destination="W23-YZ-S2C" id="1tq-ne-FFn"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kuT-Kz-uT6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2973.913043478261" y="69.642857142857139"/>
         </scene>
     </scenes>
     <resources>

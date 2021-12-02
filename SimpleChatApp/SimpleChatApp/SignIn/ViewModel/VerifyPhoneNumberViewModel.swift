@@ -11,6 +11,7 @@ import SimpleChatAppAPI
 protocol VerifyPhoneNumberCoordinatorDelegate {
     func dismiss()
     func openCountryCodeListView(withSelf self: VerifyPhoneNumberViewController)
+    func openSMSVerificationView(withPhoneNumber: String)
 }
 
 protocol VerifyPhoneNumberViewModelProtocol {
@@ -43,6 +44,10 @@ final class VerifyPhoneNumberViewModel: VerifyPhoneNumberViewModelProtocol {
     
     func openCountryCodeListView(withSelf vcSelf: VerifyPhoneNumberViewController){
         coordinatorDelegate?.openCountryCodeListView(withSelf: vcSelf)
+    }
+    
+    func openSMSVerificationView(phoneNumber: String) {
+        coordinatorDelegate?.openSMSVerificationView(withPhoneNumber: phoneNumber)
     }
 }
 

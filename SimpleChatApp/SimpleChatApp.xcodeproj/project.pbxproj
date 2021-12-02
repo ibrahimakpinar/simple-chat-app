@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		260A5F61275565B6004EE581 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 260A5F60275565B6004EE581 /* GoogleService-Info.plist */; };
+		261146DE2758065300032BB6 /* SMSVerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146DD2758065300032BB6 /* SMSVerificationViewController.swift */; };
+		261146E02758066300032BB6 /* SMSVerificationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146DF2758066300032BB6 /* SMSVerificationViewModel.swift */; };
 		261AC059273C67E200F3F1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261AC058273C67E200F3F1EA /* AppDelegate.swift */; };
 		261AC060273C67E200F3F1EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261AC05E273C67E200F3F1EA /* Main.storyboard */; };
 		261AC062273C67E300F3F1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261AC061273C67E300F3F1EA /* Assets.xcassets */; };
@@ -64,6 +66,8 @@
 /* Begin PBXFileReference section */
 		1AD5E4EEDD4364971B364B79 /* Pods-SimpleChatApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleChatApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleChatApp/Pods-SimpleChatApp.release.xcconfig"; sourceTree = "<group>"; };
 		260A5F60275565B6004EE581 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		261146DD2758065300032BB6 /* SMSVerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSVerificationViewController.swift; sourceTree = "<group>"; };
+		261146DF2758066300032BB6 /* SMSVerificationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SMSVerificationViewModel.swift; sourceTree = "<group>"; };
 		261AC055273C67E200F3F1EA /* SimpleChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261AC058273C67E200F3F1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		261AC05F273C67E200F3F1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -285,6 +289,7 @@
 				261AC097273C74AC00F3F1EA /* SignInViewModel.swift */,
 				2649D8B52745A24E00C36611 /* VerifyPhoneNumberViewModel.swift */,
 				269CE0AD2750362D002374A0 /* CountryCodeListViewModel.swift */,
+				261146DF2758066300032BB6 /* SMSVerificationViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -295,6 +300,7 @@
 				2649D897273F1D0200C36611 /* SignInViewController.swift */,
 				2649D8B22745A20700C36611 /* VerifyPhoneNumberViewController.swift */,
 				269CE0AB27503500002374A0 /* CountryCodeListViewController.swift */,
+				261146DD2758065300032BB6 /* SMSVerificationViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -595,6 +601,7 @@
 				269CE0A8274EE395002374A0 /* KeyboardLayoutConstraint.swift in Sources */,
 				2649D8A627444A7D00C36611 /* MainCoordinator.swift in Sources */,
 				261AC0A1273C78BE00F3F1EA /* utils.swift in Sources */,
+				261146E02758066300032BB6 /* SMSVerificationViewModel.swift in Sources */,
 				2649D8B62745A24E00C36611 /* VerifyPhoneNumberViewModel.swift in Sources */,
 				2649D89A274037BB00C36611 /* AppCoordinator.swift in Sources */,
 				269CE0AC27503500002374A0 /* CountryCodeListViewController.swift in Sources */,
@@ -603,6 +610,7 @@
 				269CE0B527517962002374A0 /* CountryCodeTableViewCell.swift in Sources */,
 				2649D8AA27444ADB00C36611 /* MainViewModel.swift in Sources */,
 				269CE0B72751810F002374A0 /* UITableViewCell+Extensions.swift in Sources */,
+				261146DE2758065300032BB6 /* SMSVerificationViewController.swift in Sources */,
 				2649D89C2740495A00C36611 /* SceneDelegate.swift in Sources */,
 				269CE0AA274EEBFE002374A0 /* UITextField+Extensions.swift in Sources */,
 				2649D8A3274313FD00C36611 /* Coordinator.swift in Sources */,

@@ -12,6 +12,7 @@ import Firebase
 import FirebasePhoneAuthUI
 
 class VerifyPhoneNumberViewController: UIViewController, Storyboarded, FUIAuthDelegate {
+    @IBOutlet weak var cardView: UIView!
     @IBOutlet weak var textCountryCode: UITextField!
     @IBOutlet weak var textPhoneNumber: UITextField!
     @IBOutlet weak var verifyButton: UIButton!
@@ -19,6 +20,9 @@ class VerifyPhoneNumberViewController: UIViewController, Storyboarded, FUIAuthDe
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.cardView.layer.cornerRadius = 8.0
+        self.cardView.clipsToBounds = true
+        
         self.title = viewModel?.getTitle()
         self.verifyButton.isEnabled = false
         self.textCountryCode.addTarget(self, action: #selector(countryCodeOnTapped),
@@ -31,15 +35,19 @@ class VerifyPhoneNumberViewController: UIViewController, Storyboarded, FUIAuthDe
            return
         }
         
+        self.viewModel?.openSMSVerificationView(phoneNumber: completeNumber)
+        
         PhoneAuthProvider.provider()
           .verifyPhoneNumber(completeNumber, uiDelegate: nil) { verificationID, error in
-              if let error = error {
+            if let error = error {
                 print(error.localizedDescription)
                 return
-              }
+            }
+
+            UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
             
-              UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
         }
+        
     }
     
     
@@ -66,11 +74,5 @@ extension VerifyPhoneNumberViewController: CountryCodeListCoordinatorDelegate {
         self.navigationController?.popViewController(animated: true)
         self.textCountryCode.text = "\(countryCode.dialCode) (\(countryCode.name))"
         self.viewModel?.dialCode = countryCode.dialCode
-        /*
-        FUIAuth.defaultAuthUI()?.delegate = self
-        let phoneProvider = FUIPhoneAuth.init(authUI: FUIAuth.defaultAuthUI()!)
-        FUIAuth.defaultAuthUI()?.providers = [phoneProvider]
-        phoneProvider.signIn(withPresenting: self, phoneNumber: nil)
-        */
     }
 }

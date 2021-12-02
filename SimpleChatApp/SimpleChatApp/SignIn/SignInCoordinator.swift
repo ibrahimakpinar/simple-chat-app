@@ -53,6 +53,16 @@ extension SignInCoordinator: SignInCoordinatorViewModelDelegate {
 }
 
 extension SignInCoordinator: VerifyPhoneNumberCoordinatorDelegate {
+    
+    func openSMSVerificationView(withPhoneNumber: String) {
+        let vc = SMSVerificationViewController.instantiate(withStoryboardName: "SignIn")
+        let viewModel =  SMSVerificationViewModel(withPhoneNumber: withPhoneNumber)
+        vc.viewModel = viewModel
+        
+        self.navigationController.setNavigationBarHidden(false, animated: true)
+        self.navigationController.pushViewController(vc, animated: true)
+    }
+    
     func openCountryCodeListView(withSelf vcSelf: VerifyPhoneNumberViewController) {
         let vc = CountryCodeListViewController.instantiate(withStoryboardName: "SignIn")
         
