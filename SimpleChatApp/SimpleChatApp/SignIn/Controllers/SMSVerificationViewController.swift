@@ -34,7 +34,7 @@ class SMSVerificationViewController: UIViewController, Storyboarded {
         fifthDigit.addBottomBorder()
         sixthDigit.addBottomBorder()
         
-        self.view.viewWithTag(1)?.becomeFirstResponder()
+        firstDigit.becomeFirstResponder()
     }
     
     @IBAction func digitEntered(_ sender: UITextField) {

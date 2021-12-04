@@ -7,7 +7,7 @@
 
 import UIKit
 import Foundation
-
+import FirebaseAuth
 
 class AppCoordinator: Coordinator {
     var childCoordinator: [Coordinator] = []
@@ -19,7 +19,12 @@ class AppCoordinator: Coordinator {
     }
     
     func start() {
-        openLoginFlow()
+        if Auth.auth().currentUser != nil {
+            openMainFlow()
+        
+        } else {
+            openLoginFlow()
+        }
     }
     
     var rootViewController: UIViewController {

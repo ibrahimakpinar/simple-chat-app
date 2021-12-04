@@ -162,17 +162,27 @@
                                     <constraint firstItem="EZJ-yI-bNl" firstAttribute="centerY" secondItem="Be1-5I-Cqy" secondAttribute="centerY" id="irn-Lr-CSg"/>
                                 </constraints>
                             </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="WIJ-lH-jmh">
+                                <rect key="frame" x="182" y="428" width="50" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="50" id="eJv-SZ-1cZ"/>
+                                    <constraint firstAttribute="height" constant="50" id="o7R-IB-Bhk"/>
+                                </constraints>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="oKf-h6-Uup"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="oKf-h6-Uup" firstAttribute="bottom" secondItem="Be1-5I-Cqy" secondAttribute="bottom" id="PBB-6C-J0f" customClass="KeyboardLayoutConstraint" customModule="SimpleChatApp" customModuleProvider="target"/>
+                            <constraint firstItem="WIJ-lH-jmh" firstAttribute="centerX" secondItem="oKf-h6-Uup" secondAttribute="centerX" id="UOw-XM-rX8"/>
+                            <constraint firstItem="WIJ-lH-jmh" firstAttribute="centerY" secondItem="oKf-h6-Uup" secondAttribute="centerY" id="gtO-qR-bk8"/>
                             <constraint firstItem="Be1-5I-Cqy" firstAttribute="top" secondItem="oKf-h6-Uup" secondAttribute="top" id="nj5-iP-Ide"/>
                             <constraint firstItem="Be1-5I-Cqy" firstAttribute="leading" secondItem="oKf-h6-Uup" secondAttribute="leading" id="nsP-MA-DGn"/>
                             <constraint firstItem="oKf-h6-Uup" firstAttribute="trailing" secondItem="Be1-5I-Cqy" secondAttribute="trailing" id="yRw-Km-OZJ"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="WIJ-lH-jmh" id="tSV-MA-oRT"/>
                         <outlet property="cardView" destination="EZJ-yI-bNl" id="ER5-8T-Hrz"/>
                         <outlet property="textCountryCode" destination="JGk-Eo-S4X" id="7Gh-k9-e5q"/>
                         <outlet property="textPhoneNumber" destination="erX-wt-fEn" id="oRi-Yc-kqq"/>

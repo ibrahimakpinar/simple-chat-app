@@ -9,9 +9,14 @@ import Foundation
 import FirebaseAuth
 
 
+protocol SMSVerificationViewModelCoordinatorDelegate {
+    func userDidSigned()
+}
+
 final class SMSVerificationViewModel {
     let phoneNumber: String
     var code: String?
+    var coordinatorDelegate: SMSVerificationViewModelCoordinatorDelegate?
     
     var description: String? {
         return "Enter the 6-digit code we sent to \n\(phoneNumber) "
@@ -27,13 +32,11 @@ final class SMSVerificationViewModel {
             verificationCode: code!
         )
         
-        Auth.auth().signIn(with: credential) { authResult, error in
+        Auth.auth().signIn(with: credential) { [self] authResult, error in
             if let error = error {
                 print(error)
             }
-            
-            //TODO: open chat view
-          
+            coordinatorDelegate?.userDidSigned()
         }
     }
 }

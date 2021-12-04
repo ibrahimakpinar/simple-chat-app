@@ -57,6 +57,7 @@ extension SignInCoordinator: VerifyPhoneNumberCoordinatorDelegate {
     func openSMSVerificationView(withPhoneNumber: String) {
         let vc = SMSVerificationViewController.instantiate(withStoryboardName: "SignIn")
         let viewModel =  SMSVerificationViewModel(withPhoneNumber: withPhoneNumber)
+        viewModel.coordinatorDelegate = self
         vc.viewModel = viewModel
         
         self.navigationController.setNavigationBarHidden(false, animated: true)
@@ -78,4 +79,11 @@ extension SignInCoordinator: VerifyPhoneNumberCoordinatorDelegate {
         
     }
 
+}
+
+// MARK: User auhtenticated with phone number
+extension SignInCoordinator: SMSVerificationViewModelCoordinatorDelegate {
+    func userDidSigned() {
+        parentCoordinator?.openMainFlow()
+    }
 }
