@@ -8,8 +8,6 @@
 import UIKit
 
 class MainViewController: UIViewController, Storyboarded {
- 
-    
     weak var coordinator: MainCoordinator?
     
     override func viewDidLoad() {

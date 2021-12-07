@@ -177,6 +177,39 @@
 			path = viewModel;
 			sourceTree = "<group>";
 		};
+		261146EA275FF68D00032BB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				261AC093273C748400F3F1EA /* SignIn.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		261146EB275FF6D700032BB6 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				2649D8A927444ADB00C36611 /* MainViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		261146EC275FF6E300032BB6 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				261AC05E273C67E200F3F1EA /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		261146ED275FF6EF00032BB6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				2649D8A727444AB100C36611 /* MainViewController.swift */,
+				2649D8AD27444C5A00C36611 /* MainTabBarViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		261AC04C273C67E200F3F1EA = {
 			isa = PBXGroup;
 			children = (
@@ -251,9 +284,9 @@
 			children = (
 				2649D8BC2745A4B200C36611 /* Models */,
 				2649D8B42745A23600C36611 /* ViewModel */,
+				261146EA275FF68D00032BB6 /* View */,
 				2649D8B72745A25300C36611 /* Controllers */,
 				261AC091273C746B00F3F1EA /* SignInCoordinator.swift */,
-				261AC093273C748400F3F1EA /* SignIn.storyboard */,
 			);
 			path = SignIn;
 			sourceTree = "<group>";
@@ -297,11 +330,10 @@
 		2649D8A427444A6A00C36611 /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				261AC05E273C67E200F3F1EA /* Main.storyboard */,
+				261146ED275FF6EF00032BB6 /* Controllers */,
+				261146EC275FF6E300032BB6 /* View */,
+				261146EB275FF6D700032BB6 /* ViewModel */,
 				2649D8A527444A7D00C36611 /* MainCoordinator.swift */,
-				2649D8A727444AB100C36611 /* MainViewController.swift */,
-				2649D8A927444ADB00C36611 /* MainViewModel.swift */,
-				2649D8AD27444C5A00C36611 /* MainTabBarViewController.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
