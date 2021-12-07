@@ -27,6 +27,7 @@ final class SMSVerificationViewModel {
     }
     
     func auth() {
+        
         let credential = PhoneAuthProvider.provider().credential(
             withVerificationID: UserDefaults.standard.string(forKey: "authVerificationID")!,
             verificationCode: code!
@@ -35,6 +36,7 @@ final class SMSVerificationViewModel {
         Auth.auth().signIn(with: credential) { [self] authResult, error in
             if let error = error {
                 print(error)
+                return
             }
             coordinatorDelegate?.userDidSigned()
         }

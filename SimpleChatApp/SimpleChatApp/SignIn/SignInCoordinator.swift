@@ -20,7 +20,7 @@ class SignInCoordinator: Coordinator {
     var apiManager: APIManager?
     let apiClient: CountryCodeServiceProtocol!
     
-    var childCoordinator: [Coordinator] = []
+    var childCoordinators: [Coordinator] = []
     
     var navigationController: UINavigationController
     
@@ -76,7 +76,7 @@ extension SignInCoordinator: VerifyPhoneNumberCoordinatorDelegate {
     }
     
     func dismiss() {
-        
+       
     }
 
 }
@@ -84,6 +84,7 @@ extension SignInCoordinator: VerifyPhoneNumberCoordinatorDelegate {
 // MARK: User auhtenticated with phone number
 extension SignInCoordinator: SMSVerificationViewModelCoordinatorDelegate {
     func userDidSigned() {
+        parentCoordinator?.childCoordinators.removeLast()
         parentCoordinator?.openMainFlow()
     }
 }

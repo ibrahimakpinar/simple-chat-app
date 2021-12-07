@@ -16,7 +16,6 @@ protocol VerifyPhoneNumberCoordinatorDelegate {
 
 protocol VerifyPhoneNumberViewModelProtocol {
     func getTitle() -> String
-    func didCountryCodeSelect(countryCode: CountryCode)
 }
 
 final class VerifyPhoneNumberViewModel: VerifyPhoneNumberViewModelProtocol {
@@ -26,10 +25,6 @@ final class VerifyPhoneNumberViewModel: VerifyPhoneNumberViewModelProtocol {
     var completeNumber: String? {
         let number = "\(String(describing: dialCode ?? ""))\(String(describing: phoneNumber ?? ""))"
         return number.isValidPhoneNumber() ? number : nil
-    }
-    
-    func didCountryCodeSelect(countryCode: CountryCode) {
-        
     }
     
     private var coordinatorDelegate: VerifyPhoneNumberCoordinatorDelegate?

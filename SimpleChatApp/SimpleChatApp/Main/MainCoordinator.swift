@@ -11,7 +11,7 @@ import Foundation
 class MainCoordinator: Coordinator {
     weak var parentCoordinator: AppCoordinator?
     
-    var childCoordinator: [Coordinator] = []
+    var childCoordinators: [Coordinator] = []
     
     var navigationController: UINavigationController
     
@@ -22,7 +22,7 @@ class MainCoordinator: Coordinator {
     func start() {
         let vc = MainTabBarViewController.instantiate(withStoryboardName: "Main")
         vc.coordinator = self
-        self.navigationController.pushViewController(vc, animated: true)
+        self.navigationController.viewControllers = [vc]
     }
 
 }

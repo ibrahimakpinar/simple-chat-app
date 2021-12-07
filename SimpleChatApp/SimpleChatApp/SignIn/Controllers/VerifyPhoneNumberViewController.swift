@@ -46,13 +46,14 @@ class VerifyPhoneNumberViewController: UIViewController, Storyboarded, FUIAuthDe
             
             if let error = error {
                 print(error.localizedDescription)
-                self.verifyButton.isEnabled = true
+                self.verifyButton.isEnabled = false
                 //TODO: show error
             } else {
                 self.viewModel?.openSMSVerificationView(phoneNumber: completeNumber)
                 UserDefaults.standard.set(verificationID, forKey: "authVerificationID")
             }
         }
+ 
     }
     
     

@@ -13,8 +13,7 @@ protocol SignInViewModelProtocol {
     func getButtonTitle() -> String
 }
 
-class SignInViewModel: SignInViewModelProtocol {
-    init() {}
+final class SignInViewModel: SignInViewModelProtocol {
     
     func getTitle() -> String {
         "Welcome To App"

@@ -6,7 +6,6 @@
 //
 
 import UIKit
-import SimpleChatAppAPI
 
 enum LinkType: String {
         case termsAndConditions
@@ -32,6 +31,7 @@ class SignInViewController: UIViewController, Storyboarded {
         guard viewModel != nil else {
             fatalError("ohh boy! view model cannot be nil!")
         }
+        
         self.lblTitle.text = viewModel?.getTitle()
         self.textTermsOfService.hyperLink(originalText: viewModel!.getTermsAndConditions(), linkTextsAndTypes: ["terms of service": LinkType.termsAndConditions.rawValue,"Privacy Policy": LinkType.privacyPolicy.rawValue])
         

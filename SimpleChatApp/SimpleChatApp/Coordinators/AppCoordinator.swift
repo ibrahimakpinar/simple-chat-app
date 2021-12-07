@@ -10,7 +10,7 @@ import Foundation
 import FirebaseAuth
 
 class AppCoordinator: Coordinator {
-    var childCoordinator: [Coordinator] = []
+    var childCoordinators: [Coordinator] = []
     
     var navigationController: UINavigationController
     
@@ -34,14 +34,14 @@ class AppCoordinator: Coordinator {
     func openLoginFlow() {
         let signInCoordinator = SignInCoordinator(navigationController: navigationController)
         signInCoordinator.parentCoordinator = self
-        childCoordinator.append(signInCoordinator)
+        childCoordinators.append(signInCoordinator)
         signInCoordinator.start()
     }
     
     func openMainFlow() {
         let mainCoordinator = MainCoordinator(navigationController: navigationController)
         mainCoordinator.parentCoordinator = self
-        childCoordinator.append(mainCoordinator)
+        childCoordinators.append(mainCoordinator)
         mainCoordinator.start()
     }
 }
