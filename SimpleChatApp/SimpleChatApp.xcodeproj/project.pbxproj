@@ -13,6 +13,10 @@
 		261146E5275C063500032BB6 /* SignInViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146E4275C063500032BB6 /* SignInViewTests.swift */; };
 		261146E7275C0C7300032BB6 /* SignInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146E6275C0C7300032BB6 /* SignInViewModelTests.swift */; };
 		261146E9275D5A9400032BB6 /* VerifyPhoneNumberViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146E8275D5A9400032BB6 /* VerifyPhoneNumberViewModelTests.swift */; };
+		261146EF27613ED200032BB6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146EE27613ED200032BB6 /* ChatViewController.swift */; };
+		261146F1276140E400032BB6 /* PhoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146F0276140E300032BB6 /* PhoneViewController.swift */; };
+		261146F3276141B800032BB6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146F2276141B800032BB6 /* CameraViewController.swift */; };
+		261146F52761424F00032BB6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146F42761424F00032BB6 /* SettingsViewController.swift */; };
 		261AC059273C67E200F3F1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261AC058273C67E200F3F1EA /* AppDelegate.swift */; };
 		261AC060273C67E200F3F1EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261AC05E273C67E200F3F1EA /* Main.storyboard */; };
 		261AC062273C67E300F3F1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261AC061273C67E300F3F1EA /* Assets.xcassets */; };
@@ -74,6 +78,10 @@
 		261146E4275C063500032BB6 /* SignInViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewTests.swift; sourceTree = "<group>"; };
 		261146E6275C0C7300032BB6 /* SignInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelTests.swift; sourceTree = "<group>"; };
 		261146E8275D5A9400032BB6 /* VerifyPhoneNumberViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewModelTests.swift; sourceTree = "<group>"; };
+		261146EE27613ED200032BB6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		261146F0276140E300032BB6 /* PhoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneViewController.swift; sourceTree = "<group>"; };
+		261146F2276141B800032BB6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		261146F42761424F00032BB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		261AC055273C67E200F3F1EA /* SimpleChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261AC058273C67E200F3F1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		261AC05F273C67E200F3F1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -206,6 +214,10 @@
 			children = (
 				2649D8A727444AB100C36611 /* MainViewController.swift */,
 				2649D8AD27444C5A00C36611 /* MainTabBarViewController.swift */,
+				261146EE27613ED200032BB6 /* ChatViewController.swift */,
+				261146F0276140E300032BB6 /* PhoneViewController.swift */,
+				261146F2276141B800032BB6 /* CameraViewController.swift */,
+				261146F42761424F00032BB6 /* SettingsViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -668,6 +680,7 @@
 				261AC0A1273C78BE00F3F1EA /* utils.swift in Sources */,
 				261146E02758066300032BB6 /* SMSVerificationViewModel.swift in Sources */,
 				2649D8B62745A24E00C36611 /* VerifyPhoneNumberViewModel.swift in Sources */,
+				261146F1276140E400032BB6 /* PhoneViewController.swift in Sources */,
 				2649D89A274037BB00C36611 /* AppCoordinator.swift in Sources */,
 				269CE0AC27503500002374A0 /* CountryCodeListViewController.swift in Sources */,
 				261AC059273C67E200F3F1EA /* AppDelegate.swift in Sources */,
@@ -681,7 +694,10 @@
 				2649D8A3274313FD00C36611 /* Coordinator.swift in Sources */,
 				261AC098273C74AC00F3F1EA /* SignInViewModel.swift in Sources */,
 				2649D8AE27444C5A00C36611 /* MainTabBarViewController.swift in Sources */,
+				261146F52761424F00032BB6 /* SettingsViewController.swift in Sources */,
+				261146EF27613ED200032BB6 /* ChatViewController.swift in Sources */,
 				261AC092273C746B00F3F1EA /* SignInCoordinator.swift in Sources */,
+				261146F3276141B800032BB6 /* CameraViewController.swift in Sources */,
 				2649D898273F1D0200C36611 /* SignInViewController.swift in Sources */,
 				261AC09E273C769500F3F1EA /* AppStoryboard.swift in Sources */,
 			);

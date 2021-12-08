@@ -8,21 +8,69 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Chats-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ChatViewController" id="BYZ-38-t0r" customClass="ChatViewController" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemRedColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="5Fb-56-m4h"/>
+                    <tabBarItem key="tabBarItem" title="Chats" image="message" catalog="system" landscapeImage="message" selectedImage="message" id="5Fb-56-m4h"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1047.8260869565217" y="111.83035714285714"/>
+            <point key="canvasLocation" x="1313" y="-357"/>
+        </scene>
+        <!--Calls-->
+        <scene sceneID="HIn-ax-aNY">
+            <objects>
+                <viewController storyboardIdentifier="PhoneViewController" id="rHf-p5-Of8" customClass="PhoneViewController" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="3K1-Bl-9gt">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dbh-Qy-9Eb"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Calls" image="phone" catalog="system" selectedImage="phone" id="e6O-yP-R3x"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8GI-dC-eoe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="332"/>
+        </scene>
+        <!--Camera-->
+        <scene sceneID="z55-yV-EuZ">
+            <objects>
+                <viewController storyboardIdentifier="CameraViewController" id="cpe-fe-aeT" customClass="CameraViewController" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="CFF-Lb-tqS">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="j4l-I5-rfm"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Camera" image="camera" catalog="system" id="qRP-4G-eoV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="O4C-tc-uOD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1312" y="1098"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="NXD-h2-yVu">
+            <objects>
+                <viewController storyboardIdentifier="SettingsViewController" id="62Z-hl-bQO" customClass="SettingsViewController" customModule="SimpleChatApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="hl9-1e-6MV">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="S7N-c7-OqN"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="Settings" image="gear" catalog="system" id="OU9-ea-r60"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Dti-SK-j8h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1690" y="1974"/>
         </scene>
         <!--Main Tab Bar View Controller-->
         <scene sceneID="cK5-XD-djk">
@@ -36,6 +84,9 @@
                     </tabBar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="4TW-hi-Pic"/>
+                        <segue destination="rHf-p5-Of8" kind="relationship" relationship="viewControllers" id="0Zf-e8-lH4"/>
+                        <segue destination="cpe-fe-aeT" kind="relationship" relationship="viewControllers" id="o35-1r-9jR"/>
+                        <segue destination="62Z-hl-bQO" kind="relationship" relationship="viewControllers" id="jep-cd-JYi"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wZo-U8-afs" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -44,6 +95,13 @@
         </scene>
     </scenes>
     <resources>
+        <image name="camera" catalog="system" width="128" height="94"/>
+        <image name="gear" catalog="system" width="128" height="119"/>
+        <image name="message" catalog="system" width="128" height="113"/>
+        <image name="phone" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemRedColor">
             <color red="1" green="0.23137254901960785" blue="0.18823529411764706" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
