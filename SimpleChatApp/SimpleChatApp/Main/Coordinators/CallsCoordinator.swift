@@ -1,14 +1,13 @@
 //
-//  MainCoordinator.swift
+//  CallsCoordinator.swift
 //  SimpleChatApp
 //
-//  Created by ibrahim akpinar on 16.11.2021.
+//  Created by ibrahim akpinar on 13.12.2021.
 //
 
 import UIKit
-import Foundation
 
-class MainCoordinator: Coordinator {
+class CallsCoordiantor: Coordinator {
     weak var parentCoordinator: AppCoordinator?
     
     var childCoordinators: [Coordinator] = []
@@ -20,9 +19,9 @@ class MainCoordinator: Coordinator {
     }
     
     func start() {
-        let vc = MainTabBarViewController.instantiate(withStoryboardName: "Main")
-        vc.coordinator = self
-        self.navigationController.viewControllers = [vc]
+        let viewModel = CallsViewModel()
+        let vc = CallsViewController.instantiate(withStoryboardName: "Main")
+        vc.viewModel = viewModel
+        self.navigationController.pushViewController(vc, animated: true)
     }
-
 }

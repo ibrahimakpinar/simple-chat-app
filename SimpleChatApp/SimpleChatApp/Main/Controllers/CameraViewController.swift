@@ -8,6 +8,8 @@
 import UIKit
 
 class CameraViewController: UIViewController, Storyboarded {
+    var viewModel: CameraViewModel?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     }

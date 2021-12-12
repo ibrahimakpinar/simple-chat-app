@@ -8,7 +8,9 @@
 import Foundation
 
 class SettingsViewModel {
-    init() {
-        
+    init() {}
+    
+    func getTitle() -> String {
+        return "Settings"
     }
 }

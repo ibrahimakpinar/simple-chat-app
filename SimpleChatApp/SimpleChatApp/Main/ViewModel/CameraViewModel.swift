@@ -8,7 +8,9 @@
 import Foundation
 
 class CameraViewModel {
-    init() {
-        
+    init() {}
+    
+    func getTitle() -> String {
+        return "Camera"
     }
 }

@@ -39,7 +39,7 @@ class AppCoordinator: Coordinator {
     }
     
     func openMainFlow() {
-        let mainCoordinator = MainCoordinator(navigationController: navigationController)
+        let mainCoordinator = TabBarCoordinator(navigationController: navigationController)
         mainCoordinator.parentCoordinator = self
         childCoordinators.append(mainCoordinator)
         mainCoordinator.start()

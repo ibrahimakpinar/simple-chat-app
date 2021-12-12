@@ -7,8 +7,10 @@
 
 import Foundation
 
-class PhoneViewModel {
-    init() {
-        
+class CallsViewModel {
+    init() {}
+    
+    func getTitle() -> String {
+        return "Calls"
     }
 }

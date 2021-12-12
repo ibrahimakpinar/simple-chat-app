@@ -12,4 +12,8 @@ class ChatViewModel {
     init() {
         
     }
+    
+    func getTitle() -> String {
+        return "Chats"
+    }
 }
