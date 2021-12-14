@@ -20,7 +20,7 @@ class ChatCoordinator: Coordinator {
     
     func start() {
         let viewModel = ChatViewModel()
-        let vc = ChatViewController.instantiate(withStoryboardName: "Main")
+        let vc = ChatsViewController.instantiate(withStoryboardName: "Main")
         vc.viewModel = viewModel
         self.navigationController.pushViewController(vc, animated: true)
     }

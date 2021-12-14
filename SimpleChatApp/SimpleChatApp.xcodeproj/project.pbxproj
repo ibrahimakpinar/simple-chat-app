@@ -13,7 +13,7 @@
 		261146E5275C063500032BB6 /* SignInViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146E4275C063500032BB6 /* SignInViewTests.swift */; };
 		261146E7275C0C7300032BB6 /* SignInViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146E6275C0C7300032BB6 /* SignInViewModelTests.swift */; };
 		261146E9275D5A9400032BB6 /* VerifyPhoneNumberViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146E8275D5A9400032BB6 /* VerifyPhoneNumberViewModelTests.swift */; };
-		261146EF27613ED200032BB6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146EE27613ED200032BB6 /* ChatViewController.swift */; };
+		261146EF27613ED200032BB6 /* ChatsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146EE27613ED200032BB6 /* ChatsViewController.swift */; };
 		261146F1276140E400032BB6 /* CallsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146F0276140E300032BB6 /* CallsViewController.swift */; };
 		261146F3276141B800032BB6 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146F2276141B800032BB6 /* CameraViewController.swift */; };
 		261146F52761424F00032BB6 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261146F42761424F00032BB6 /* SettingsViewController.swift */; };
@@ -27,6 +27,8 @@
 		2611470B2766981F00032BB6 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2611470A2766981F00032BB6 /* TabBarController.swift */; };
 		2611470D2766991F00032BB6 /* ChatCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2611470C2766991F00032BB6 /* ChatCoordinator.swift */; };
 		2611470F2766A5C100032BB6 /* CallsCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2611470E2766A5C100032BB6 /* CallsCoordinator.swift */; };
+		261147122767DFD300032BB6 /* MessageItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261147112767DFD300032BB6 /* MessageItem.swift */; };
+		261147142767E5C600032BB6 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261147132767E5C600032BB6 /* ChatViewController.swift */; };
 		261AC059273C67E200F3F1EA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261AC058273C67E200F3F1EA /* AppDelegate.swift */; };
 		261AC060273C67E200F3F1EA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 261AC05E273C67E200F3F1EA /* Main.storyboard */; };
 		261AC062273C67E300F3F1EA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261AC061273C67E300F3F1EA /* Assets.xcassets */; };
@@ -86,7 +88,7 @@
 		261146E4275C063500032BB6 /* SignInViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewTests.swift; sourceTree = "<group>"; };
 		261146E6275C0C7300032BB6 /* SignInViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModelTests.swift; sourceTree = "<group>"; };
 		261146E8275D5A9400032BB6 /* VerifyPhoneNumberViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerifyPhoneNumberViewModelTests.swift; sourceTree = "<group>"; };
-		261146EE27613ED200032BB6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		261146EE27613ED200032BB6 /* ChatsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewController.swift; sourceTree = "<group>"; };
 		261146F0276140E300032BB6 /* CallsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsViewController.swift; sourceTree = "<group>"; };
 		261146F2276141B800032BB6 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		261146F42761424F00032BB6 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -100,6 +102,8 @@
 		2611470A2766981F00032BB6 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		2611470C2766991F00032BB6 /* ChatCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatCoordinator.swift; sourceTree = "<group>"; };
 		2611470E2766A5C100032BB6 /* CallsCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallsCoordinator.swift; sourceTree = "<group>"; };
+		261147112767DFD300032BB6 /* MessageItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageItem.swift; sourceTree = "<group>"; };
+		261147132767E5C600032BB6 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		261AC055273C67E200F3F1EA /* SimpleChatApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SimpleChatApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261AC058273C67E200F3F1EA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		261AC05F273C67E200F3F1EA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -233,11 +237,12 @@
 		261146ED275FF6EF00032BB6 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				261146EE27613ED200032BB6 /* ChatViewController.swift */,
+				261146EE27613ED200032BB6 /* ChatsViewController.swift */,
 				261146F0276140E300032BB6 /* CallsViewController.swift */,
 				261146F2276141B800032BB6 /* CameraViewController.swift */,
 				261146F42761424F00032BB6 /* SettingsViewController.swift */,
 				2611470A2766981F00032BB6 /* TabBarController.swift */,
+				261147132767E5C600032BB6 /* ChatViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -259,6 +264,14 @@
 				2611470E2766A5C100032BB6 /* CallsCoordinator.swift */,
 			);
 			path = Coordinators;
+			sourceTree = "<group>";
+		};
+		261147102767DF9A00032BB6 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				261147112767DFD300032BB6 /* MessageItem.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		261AC04C273C67E200F3F1EA = {
@@ -381,6 +394,7 @@
 		2649D8A427444A6A00C36611 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				261147102767DF9A00032BB6 /* Model */,
 				26114709276696EC00032BB6 /* Coordinators */,
 				261146ED275FF6EF00032BB6 /* Controllers */,
 				261146EC275FF6E300032BB6 /* View */,
@@ -716,6 +730,7 @@
 				269CE0AE2750362D002374A0 /* CountryCodeListViewModel.swift in Sources */,
 				2649D8A127430A5B00C36611 /* Storyboardable.swift in Sources */,
 				2649D8B12744566300C36611 /* UITextView+Extensions.swift in Sources */,
+				261147122767DFD300032BB6 /* MessageItem.swift in Sources */,
 				269CE0A8274EE395002374A0 /* KeyboardLayoutConstraint.swift in Sources */,
 				261146FB2761475900032BB6 /* CameraViewModel.swift in Sources */,
 				2649D8A627444A7D00C36611 /* TabBarCoordinator.swift in Sources */,
@@ -741,8 +756,9 @@
 				269CE0AA274EEBFE002374A0 /* UITextField+Extensions.swift in Sources */,
 				2649D8A3274313FD00C36611 /* Coordinator.swift in Sources */,
 				261AC098273C74AC00F3F1EA /* SignInViewModel.swift in Sources */,
+				261147142767E5C600032BB6 /* ChatViewController.swift in Sources */,
 				261146F52761424F00032BB6 /* SettingsViewController.swift in Sources */,
-				261146EF27613ED200032BB6 /* ChatViewController.swift in Sources */,
+				261146EF27613ED200032BB6 /* ChatsViewController.swift in Sources */,
 				261AC092273C746B00F3F1EA /* SignInCoordinator.swift in Sources */,
 				261146F3276141B800032BB6 /* CameraViewController.swift in Sources */,
 				261146F92761474500032BB6 /* CallsViewModel.swift in Sources */,

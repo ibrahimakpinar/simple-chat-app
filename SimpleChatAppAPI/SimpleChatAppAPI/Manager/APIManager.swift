@@ -19,8 +19,8 @@ public class APIManager: APIManagerProtocol {
     
     public func fetchLocalJSONData<T>(with endPoint: String, completion: @escaping (Result<T, Error>) -> Void) where T : Decodable {
         
-        let bundle = Bundle(for: type(of: self))
-        let decoder = JSONDecoder()
+        _ = Bundle(for: type(of: self))
+        _ = JSONDecoder()
         
         do {
             let bundle = Bundle(for: type(of: self))
