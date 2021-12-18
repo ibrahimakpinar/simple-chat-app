@@ -9,7 +9,7 @@ import UIKit
 import Foundation
 import SimpleChatAppAPI
 
-protocol SignInCoordinatorDelegate : class{
+protocol SignInCoordinatorDelegate : AnyObject{
     func dismiss()
 }
 
@@ -27,7 +27,7 @@ class SignInCoordinator: Coordinator {
     init(navigationController: UINavigationController) {
         self.navigationController = navigationController
         self.apiManager  = APIManager()
-        self.apiClient = CountryCodeService(apiManager: self.apiManager as! APIManagerProtocol)
+        self.apiClient = CountryCodeService(apiManager: self.apiManager!)
     }
     
     func start() {

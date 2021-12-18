@@ -12,7 +12,7 @@ enum LinkType: String {
         case privacyPolicy
 }
 
-protocol SignInCoordinatorViewModelDelegate: class {
+protocol SignInCoordinatorViewModelDelegate: AnyObject {
     func openVerifyPhoneNumberView()
 }
 
@@ -51,7 +51,7 @@ class SignInViewController: UIViewController, Storyboarded {
 // MARK: - UITextViewDelegate
 extension SignInViewController: UITextViewDelegate {
     func textView(_ textView: UITextView, shouldInteractWith URL: URL, in characterRange: NSRange) -> Bool {
-        if let linkType = LinkType(rawValue: URL.absoluteString) {
+        if LinkType(rawValue: URL.absoluteString) != nil {
             // TODO: handle linktype here with switch or similar.
         }
         return false

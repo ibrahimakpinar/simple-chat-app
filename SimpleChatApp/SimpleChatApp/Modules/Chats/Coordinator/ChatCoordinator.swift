@@ -19,13 +19,29 @@ class ChatCoordinator: Coordinator {
     }
     
     func start() {
-        let viewModel = ChatViewModel()
+        let viewModel = ChatViewModel(delegate: self)
         let vc = ChatsViewController.instantiate(withStoryboardName: "Main")
         vc.viewModel = viewModel
         self.navigationController.pushViewController(vc, animated: true)
     }
     
+    
     deinit {
         print("deinit")
+    }
+}
+
+extension ChatCoordinator: ContactsViewModelCoordinatorDelegate {
+    func openChat() {
+        
+    }
+}
+
+extension ChatCoordinator: ChatViewModelCoordinatorDelegate {
+    func openContacts() {
+        let viewModel = ContactsViewModel(delegate: self)
+        let vc = ContactsViewController.instantiate(withStoryboardName: "Main")
+        vc.viewModel = viewModel
+        self.navigationController.present(vc, animated: true, completion: nil)
     }
 }
