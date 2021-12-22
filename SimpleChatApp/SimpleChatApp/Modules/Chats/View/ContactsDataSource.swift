@@ -28,8 +28,6 @@ extension ContactsDataSource: UITableViewDataSource {
         
         return cell
     }
-    
-    
 }
 
 extension ContactsDataSource: UITableViewDelegate {

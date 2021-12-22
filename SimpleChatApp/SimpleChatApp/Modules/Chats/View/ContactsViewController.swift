@@ -9,11 +9,15 @@ import UIKit
 
 class ContactsViewController: UIViewController, Storyboarded {
 
+    @IBOutlet weak var tableView: UITableView!
     private(set) var dataSource: ContactsDataSource?
     
     var viewModel: ContactsViewModelProtocol!
        
     override func viewDidLoad() {
+        dataSource = viewModel.getDataSource()
+        self.tableView.delegate = dataSource
+        self.tableView.dataSource = dataSource
         super.viewDidLoad()
     }
 }

@@ -151,9 +151,24 @@
                     <view key="view" contentMode="scaleToFill" id="EnR-vm-ShD">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sSv-7e-eqf">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="cmi-gc-pLc"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="sSv-7e-eqf" firstAttribute="top" secondItem="cmi-gc-pLc" secondAttribute="top" id="Miq-ic-Jde"/>
+                            <constraint firstItem="cmi-gc-pLc" firstAttribute="trailing" secondItem="sSv-7e-eqf" secondAttribute="trailing" id="ZMl-a0-rTW"/>
+                            <constraint firstItem="sSv-7e-eqf" firstAttribute="leading" secondItem="cmi-gc-pLc" secondAttribute="leading" id="b4r-0K-kcX"/>
+                            <constraint firstItem="cmi-gc-pLc" firstAttribute="bottom" secondItem="sSv-7e-eqf" secondAttribute="bottom" id="bv1-hI-xgX"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="sSv-7e-eqf" id="Ald-1G-j5b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="l1i-Vh-uGQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
