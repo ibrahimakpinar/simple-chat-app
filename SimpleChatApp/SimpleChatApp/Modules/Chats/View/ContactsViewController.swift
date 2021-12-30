@@ -18,6 +18,13 @@ class ContactsViewController: UIViewController, Storyboarded {
         dataSource = viewModel.getDataSource()
         self.tableView.delegate = dataSource
         self.tableView.dataSource = dataSource
+        registerCells()
         super.viewDidLoad()
     }
+    
+    // MARK: UI
+      
+      private func registerCells() {
+          tableView.register(UINib(nibName: "ContactItemCell", bundle: nil), forCellReuseIdentifier: "ContactItemCell")
+      }
 }
