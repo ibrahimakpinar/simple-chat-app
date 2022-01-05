@@ -10,14 +10,17 @@ import Contacts
 import UIKit
 
 protocol ContactsViewModelCoordinatorDelegate {
-    func openChat()
+    func openChat(with contact: Contact)
 }
 
 protocol ContactsViewModelProtocol {
     func getDataSource() -> ContactsDataSource
+    func selectContact(at index: Int)
 }
 
 class ContactsViewModel: ContactsViewModelProtocol {
+  
+    
     var contacts: [Contact] = []
     
     private var coordinatorDelegate: ContactsViewModelCoordinatorDelegate?
@@ -31,12 +34,17 @@ class ContactsViewModel: ContactsViewModelProtocol {
         return "Contacts"
     }
     
-    func openChat() {
-        coordinatorDelegate?.openChat()
+    func selectContact(at index: Int) {
+        let contact = contacts[index]
+        coordinatorDelegate?.openChat(with: contact)
     }
     
     func getDataSource() -> ContactsDataSource {
-        return ContactsDataSource(with: self.contacts)
+        let didSelectConctact : ContactsDataSource.ContactDidSelectItemHandler = { [weak self] index in
+            self?.selectContact(at: index)
+        }
+        
+        return ContactsDataSource(with: self.contacts, didSelectItemHandler: didSelectConctact)
     }
     
     fileprivate func getContacts()-> [Contact] {

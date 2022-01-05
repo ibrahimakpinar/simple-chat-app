@@ -28,6 +28,11 @@ class ContactItemCell: UITableViewCell {
         self.phoneNumber.text = contact.phoneNumber
         
         self.contactImage.image = UIImage(named: contact.imageUrl)
+        contactImage.layer.borderWidth = 1
+        contactImage.layer.masksToBounds = false
+        contactImage.layer.borderColor = UIColor.black.cgColor
+        contactImage.layer.cornerRadius = contactImage.frame.height/2
+        contactImage.clipsToBounds = true
     }
     
 }

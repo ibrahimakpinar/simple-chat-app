@@ -36,6 +36,7 @@ class TabBarCoordinator: NSObject, Coordinator {
         let tabBarController = TabBarController()
                tabBarController.coordinator = self
         
+    
         // MARK: Chats
         let chatsNavigationController = UINavigationController()
         let chatImage = UIImage(systemName: "bubble.left.and.bubble.right.fill")
@@ -52,7 +53,7 @@ class TabBarCoordinator: NSObject, Coordinator {
         
         
         tabBarController.viewControllers = [chatsNavigationController, callsNavigationController]
-        
+       
         tabBarController.modalPresentationStyle = .fullScreen
         navigationController.setNavigationBarHidden(true, animated: false)
         navigationController.viewControllers = [tabBarController]

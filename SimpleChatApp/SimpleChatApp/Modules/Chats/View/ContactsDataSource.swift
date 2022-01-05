@@ -8,10 +8,13 @@
 import UIKit
 
 final class ContactsDataSource: NSObject {
+    typealias ContactDidSelectItemHandler = (Int) -> ()
+    var didSelectItemHandler: ContactDidSelectItemHandler
     var contacts: [Contact] = []
     
-    init(with contacts:[Contact]) {
+    init(with contacts:[Contact], didSelectItemHandler: @escaping ContactDidSelectItemHandler) {
         self.contacts = contacts
+        self.didSelectItemHandler = didSelectItemHandler
     }
 }
 
@@ -27,6 +30,11 @@ extension ContactsDataSource: UITableViewDataSource {
         cell.setup(with: contact)
         
         return cell
+    }
+   
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        didSelectItemHandler(indexPath.row)
     }
 }
 

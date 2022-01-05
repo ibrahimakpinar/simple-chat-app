@@ -2,13 +2,13 @@
 //  ChatViewModel.swift
 //  SimpleChatApp
 //
-//  Created by ibrahim akpinar on 8.12.2021.
+//  Created by ibrahim AKPINAR on 1.01.2022.
 //
 
 import Foundation
 
 protocol ChatViewModelCoordinatorDelegate {
-    func openContacts()
+
 }
 
 class ChatViewModel {
@@ -20,10 +20,6 @@ class ChatViewModel {
     }
     
     func getTitle() -> String {
-        return "Chats"
-    }
-    
-    func openContacts() {
-        self.coordinatorDelegate?.openContacts()
+        return "Chat"
     }
 }
